@@ -1,30 +1,26 @@
-# Lamastre-covoit
-## 
-site de coivoiturage local
+# 🚗 Lamastre-covoit - Site de Covoiturage Local .
 
-## 
+Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette documentation couvre la planification, la structure des technologies et les modèles de données du backend et du frontend, ainsi que les user stories associées au projet.
 
+## 🏗 Planification et Architecture du Backend :
 
-# Planification et Architecture du Backend
-
-
-
-# Technologies Backend
-
+### 🛠 Technologies Backend :
 
 | #  | Technologie        | Description                                                                                              |
 |----|--------------------|----------------------------------------------------------------------------------------------------------|
-| 1  | **Node.js**        | Plateforme de développement côté serveur basée sur le moteur JavaScript V8 de Chrome.                    |
-| 2  | **Express.js**     | Framework web pour Node.js qui simplifie la création de serveurs HTTP.                                   |
-| 3  | **MySQL**          | Système de gestion de base de données relationnelle pour stocker et gérer les données de l'application.  |
-| 4  | **Sequelize**      | ORM (Object-Relational Mapping) pour Node.js qui prend en charge MySQL et d'autres bases de données SQL. |
-| 5  | **JWT (JSON Web Tokens)** | Technologie pour la création de tokens de session sécurisés afin de gérer les sessions utilisateurs.    |
-| 6  | **Bcrypt**         | Bibliothèque pour hasher et sécuriser les mots de passe des utilisateurs.                                |
-| 7  | **Nodemailer**     | Module pour Node.js permettant l'envoi d'emails, utilisé pour la confirmation d'inscription ou la réinitialisation des mots de passe. |
-| 8  | **Jest**           | Framework de tests pour JavaScript, utilisé pour écrire des tests unitaires et d'intégration.             |
-| 9  | **Supertest**      | Bibliothèque pour tester les API HTTP en conjonction avec Jest.                                          |
+| 1  | **Node.js**        | 🌐 Plateforme de développement côté serveur basée sur le moteur JavaScript V8 de Chrome.                 |
+| 2  | **Express.js**     | 🚀 Framework web pour Node.js qui simplifie la création de serveurs HTTP.                                |
+| 3  | **MySQL**          | 💾 Système de gestion de base de données relationnelle pour stocker et gérer les données de l'application. |
+| 4  | **Sequelize**      | 🔄 ORM pour Node.js qui prend en charge MySQL, facilitant les interactions avec la base de données.       |
+| 5  | **JWT (JSON Web Tokens)** | 🔐 Technologie pour la création de tokens de session sécurisés afin de gérer les sessions utilisateurs. |
+| 6  | **Bcrypt**         | 🔒 Bibliothèque pour hasher et sécuriser les mots de passe des utilisateurs.                              |
+| 7  | **Nodemailer**     | 📧 Module pour l'envoi d'emails, utilisé pour des fonctionnalités comme la confirmation d'inscription.    |
+| 8  | **Jest**           | 🧪 Framework de tests pour JavaScript, utilisé pour écrire des tests unitaires et d'intégration.          |
+| 9  | **Supertest**      | 🌐 Bibliothèque pour tester les API HTTP en conjonction avec Jest.                                        |
 
-# Structure du Dossier Backend avec Tests
+### 📁 Structure du Dossier Backend avec Tests :
+
+
 
 - `/backend`
   - `/node_modules` : Dossier pour les modules Node.js installés.
@@ -69,8 +65,6 @@ site de coivoiturage local
 
 ## 
 
-## Modèles de Données
-
 # User Stories :
 
 | Rôle | En tant que... | Je veux pouvoir... | Afin de... |
@@ -96,7 +90,7 @@ site de coivoiturage local
 
 
 
-## Entités
+## Entités :
 
 | Entité       | Attributs                                             | Description                                                  |
 |--------------|-------------------------------------------------------|--------------------------------------------------------------|
@@ -105,7 +99,7 @@ site de coivoiturage local
 | Réservations | `id`, `trajet_id`, `passager_id`, `status`           | Réservations effectuées par les passagers pour des trajets.  |
 | Évaluations  | `id`, `trajet_id`, `passager_id`, `note`, `commentaire` | Évaluations laissées par les passagers après un trajet.      |
 
-## Relations et Cardinalités
+## Relations et Cardinalités :
 
 | Relation   | Description                                                 |
 |------------|-------------------------------------------------------------|
@@ -179,24 +173,27 @@ site de coivoiturage local
 
 ## 
 
-# Technologies Frontend
+# 🌐 Technologies Frontend :
 
+Bienvenue dans la section des technologies frontend utilisées pour le développement de l'interface utilisateur de notre site de covoiturage. Chaque technologie est sélectionnée pour optimiser le développement et offrir une expérience utilisateur fluide et réactive.
 
+## 🖥️ Technologies Utilisées :
 
 | #  | Technologie         | Description                                                                                              |
 |----|---------------------|----------------------------------------------------------------------------------------------------------|
-| 1  | **React**           | Bibliothèque JavaScript pour la construction d'interfaces utilisateur, utilisée pour créer des vues dynamiques dans le navigateur. |
-| 2  | **Vite.js**         | Outil de build moderne qui offre un démarrage rapide et des rechargements à chaud pour les projets utilisant des modules ES.        |
-| 3  | **React Router**    | Bibliothèque pour gérer le routage dans les applications React.                                           |
-| 4  | **Axios**           | Client HTTP basé sur les promesses pour le navigateur et Node.js, utilisé pour faire des requêtes HTTP.  |
-| 5  | **Formik**          | Bibliothèque pour la gestion des formulaires en React, facilitant la validation et le suivi des états des champs.                    |
-| 6  | **Yup**             | Constructeur de schéma pour la validation côté client, souvent utilisé avec Formik.                      |
-| 7  | **Bootstrap**       | Framework CSS pour développer rapidement des interfaces utilisateur réactives et attrayantes.            |
-| 8  | **Testing Library** | Outils de test pour aider à écrire des tests robustes pour les composants React.                         |
-| 9  | **Jest**            | Framework de tests JavaScript populaire pour les tests unitaires.                                        |
+| 1  | **React**           | 🏗️ Bibliothèque JavaScript pour la construction d'interfaces utilisateur, utilisée pour créer des vues dynamiques dans le navigateur. |
+| 2  | **Vite.js**         | ⚡ Outil de build moderne qui offre un démarrage rapide et des rechargements à chaud pour les projets utilisant des modules ES.        |
+| 3  | **React Router**    | 🚦 Bibliothèque pour gérer le routage dans les applications React, essentielle pour une navigation fluide et conditionnelle.          |
+| 4  | **Axios**           | 🌍 Client HTTP basé sur les promesses pour le navigateur et Node.js, utilisé pour faire des requêtes HTTP efficaces.                  |
+| 5  | **Formik**          | 📝 Bibliothèque pour la gestion des formulaires en React, facilitant la validation et le suivi des états des champs.                    |
+| 6  | **Yup**             | 🔍 Constructeur de schéma pour la validation côté client, souvent utilisé avec Formik pour assurer l'intégrité des données saisies.   |
+| 7  | **Bootstrap**       | 🎨 Framework CSS pour développer rapidement des interfaces utilisateur réactives et attrayantes, réduisant le temps de stylisation.   |
+| 8  | **Testing Library** | 🧪 Ensemble d'outils de test pour aider à écrire des tests robustes pour les composants React, garantissant la fiabilité des composants. |
+| 9  | **Jest**            | 📊 Framework de tests JavaScript populaire pour les tests unitaires, assurant que le code respecte les fonctionnalités attendues.       |
+
+## 📂 Structure du Dossier Frontend :
 
 
-# Structure du Dossier Frontend
 
 - `/frontend`
   - `/public`
@@ -259,116 +256,100 @@ site de coivoiturage local
 
 ## 
 
-# Planification Agile Scrum
+# 📆 Planification Agile Scrum pour Lamastre-covoit :
 
-## **Semaine 1 (25 - 29 Avril)**
+planification détaillée du projet de covoiturage, structurée selon la méthode Agile Scrum avec une visibilité claire sur les activités hebdomadaires et quotidiennes.
 
-### **Jour 1 (Jeudi 25)**
-- [ ] Cérémonie de lancement
-- [ ] Présentation du projet
-- [ ] Configuration des outils de développement
+## 🗓 **Semaine 1 (25 - 29 Avril)**
 
-### **Jour 2 (Vendredi 26)**
-- [ ] Planification du Sprint 1
-- [ ] Définition des user stories
-- [ ] Création des tâches pour le backlog
+### **🚀 Jour 1 (Jeudi 25)**
+- [ ] 🎉 Cérémonie de lancement
+- [ ] 📑 Présentation du projet
+- [ ] 🔧 Configuration des outils de développement
 
-### **Weekend**
-- [ ] Repos
+### **📅 Jour 2 (Vendredi 26)**
+- [ ] 📝 Planification du Sprint 1
+- [ ] 🗒 Définition des user stories
+- [ ] 🏗 Création des tâches pour le backlog
 
-## **Semaine 2 (30 Avril - 5 Mai)**
+### **🌞 Weekend**
+- [ ] 😌 Repos
 
-### **Lundi à Vendredi**
-- [ ] Développement Sprint 1
-  - Mise en place de l'environnement de base
-  - Architecture initiale
-  - Début de développement des fonctionnalités d'authentification et de profil utilisateur
+## 🗓 **Semaine 2 (30 Avril - 5 Mai)**
 
-## **Semaine 3 (6 - 12 Mai)**
+### **👨‍💻 Lundi à Vendredi**
+- [ ] 🛠 Développement Sprint 1
+  - 🌐 Mise en place de l'environnement de base
+  - 🏛 Architecture initiale
+  - 🗝 Début de développement des fonctionnalités d'authentification et de profil utilisateur
 
-### **Lundi**
-- [ ] Revue du Sprint 1
-- [ ] Rétrospective
-- [ ] Planification du Sprint 2
+## 🗓 **Semaine 3 (6 - 12 Mai)**
 
-### **Mardi à Vendredi**
-- [ ] Développement Sprint 2
-  - Fonctionnalités de trajet
-  - Fonctionnalités de réservation
-  - Affichage des listes
+### **🔍 Lundi**
+- [ ] 📊 Revue du Sprint 1
+- [ ] 🔄 Rétrospective
+- [ ] 🗓 Planification du Sprint 2
 
-### **Weekend**
-- [ ] Repos
+### **👨‍💻 Mardi à Vendredi**
+- [ ] 🛠 Développement Sprint 2
+  - 🛣 Fonctionnalités de trajet
+  - 🎟 Fonctionnalités de réservation
+  - 📋 Affichage des listes
 
-## **Semaine 4 (13 - 19 Mai)**
+### **🌞 Weekend**
+- [ ] 😌 Repos
 
-### **Lundi à Vendredi**
-- [ ] Continuation du Sprint 2
-  - Finalisation des fonctionnalités de réservation
-  - Développement des fonctionnalités de commentaires
+## 🗓 **Semaine 4 (13 - 19 Mai)**
 
-### **Weekend**
-- [ ] Repos
+### **👨‍💻 Lundi à Vendredi**
+- [ ] 🛠 Continuation du Sprint 2
+  - 📝 Finalisation des fonctionnalités de réservation
+  - 💬 Développement des fonctionnalités de commentaires
 
-## **Semaine 5 (20 - 26 Mai)**
+### **🌞 Weekend**
+- [ ] 😌 Repos
 
-### **Lundi**
-- [ ] Revue du Sprint 2
-- [ ] Rétrospective
-- [ ] Planification du Sprint 3
+## 🗓 **Semaine 5 (20 - 26 Mai)**
 
-### **Mardi à Vendredi**
-- [ ] Développement Sprint 3
-  - Intégration et tests
-  - Implémentation des fonctionnalités de recherche
-  - Peaufinage de l'UI/UX
+### **🔍 Lundi**
+- [ ] 📊 Revue du Sprint 2
+- [ ] 🔄 Rétrospective
+- [ ] 🗓 Planification du Sprint 3
 
-### **Weekend**
-- [ ] Repos
+### **👨‍💻 Mardi à Vendredi**
+- [ ] 🛠 Développement Sprint 3
+  - 🧪 Intégration et tests
+  - 🔍 Implémentation des fonctionnalités de recherche
+  - 🎨 Peaufinage de l'UI/UX
 
-## **Semaine 6 (27 - 28 Mai)**
+### **🌞 Weekend**
+- [ ] 😌 Repos
 
-### **Lundi**
-- [ ] Finalisation du développement
-- [ ] Tests d'acceptation
-- [ ] Préparation au déploiement
+## 🗓 **Semaine 6 (27 - 28 Mai)**
 
-### **Mardi (28)**
-- [ ] Revue finale
-- [ ] Déploiement
-- [ ] Clôture du projet
+### **👨‍💻 Lundi**
+- [ ] 🏁 Finalisation du développement
+- [ ] 🧪 Tests d'acceptation
+- [ ] 🚀 Préparation au déploiement
 
-## **Kanban Board**
+### **🔚 Mardi (28)**
+- [ ] 📊 Revue finale
+- [ ] 🚀 Déploiement
+- [ ] 🎉 Clôture du projet
 
-### **Backlog**
-- [ ] Mise en place de l'environnement de développement
-- [ ] Définition des user stories
-- [ ] Configuration initiale des serveurs backend et frontend
+## 📋 **Kanban Board**
 
-### **Sprint 1**
-- [ ] Implémentation des modèles de données utilisateur
-- [ ] Création des endpoints d'authentification
-- [ ] Mise en place du système d'authentification sur le frontend
+### **📝 Backlog**
+- [ ] 🔧 Mise en place de l'environnement de développement
+- [ ] 📝 Définition des user stories
+- [ ] 🖥 Configuration initiale des serveurs backend et frontend
 
-### **Sprint 2**
-- [ ] Développement des composants de trajets et réservations
-- [ ] Intégration de la gestion des réservations dans le backend
-- [ ] Création de l'interface utilisateur pour les fonctionnalités de trajets
+### **🔧 Sprint 1**
+- [ ] 🧑‍💻 Implémentation des modèles de données utilisateur
+- [ ] 🔗 Création des endpoints d'authentification
+- [ ] 🔐 Mise en place du système d'authentification sur le frontend
 
-### **Sprint 3**
-- [ ] Finalisation des fonctionnalités de recherche
-- [ ] Tests d'intégration et de sécurité
-- [ ] Peaufinage de l'expérience utilisateur et de l'interface
-
-### **À Tester**
-- [ ] Tests unitaires des modèles et contrôleurs
-- [ ] Tests d'interface des composants React
-
-### **À Déployer**
-- [ ] Préparation des scripts de déploiement
-- [ ] Configuration des serveurs de production
-
-### **Terminé**
-- [ ] Lancement du projet
-- [ ] Première revue du code
-
+### **🔧 Sprint 2**
+- [ ] 🚗 Développement des composants de trajets et réservations
+- [ ] 📡 Intégration de la gestion des réservations dans le backend
+- [ ]
