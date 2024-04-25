@@ -16,7 +16,8 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | 6  | **Bcrypt**         | 🔒 Bibliothèque pour hasher et sécuriser les mots de passe des utilisateurs.                              |
 | 7  | **Nodemailer**     | 📧 Module pour l'envoi d'emails, utilisé pour des fonctionnalités comme la confirmation d'inscription.    |
 | 8  | **Jest**           | 🧪 Framework de tests pour JavaScript, utilisé pour écrire des tests unitaires et d'intégration.          |
-| 9  | **Supertest**      | 🌐 Bibliothèque pour tester les API HTTP en conjonction avec Jest.                                        |
+| 9  | **Supertest**      | 🌐 Bibliothèque pour tester les API HTTP en conjonction avec Jest.
+| 10 | **mysql2**      | 🌐 Module qui sert a faire des interactions avec une base de données MySQL et améliorer les performances .                                         |
 
 ### 📁 Structure du Dossier Backend avec Tests :
 
