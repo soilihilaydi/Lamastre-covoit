@@ -84,7 +84,7 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 
 # Modèle Conceptuel de Données (MCD) :
 
-## 
+
 
 ![Description alternative](./MCD.svg "MCD du site de coivoituge local")
 
