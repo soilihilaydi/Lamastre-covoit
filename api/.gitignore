@@ -1,0 +1,42 @@
+# Fichiers de configuration de l'environnement
+.env
+
+
+# Dossier node_modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dossiers de build et de distribution
+/dist
+/build
+/coverage
+
+# Fichiers et dossiers de l'éditeur
+/.vscode
+
+
+# Fichiers système spécifiques
+.DS_Store
+Thumbs.db
+
+# Fichiers de cache
+.cache
+*.tmp
+*.temp
+
+# Fichiers de compilation
+*.tsbuildinfo
+*.hmap
+
+# Archives et fichiers compressés
+*.tar.gz
+*.zip
+*.rar
+
+# Fichiers de configuration spécifiques aux tests
+/coverage
+/jest.config.js
