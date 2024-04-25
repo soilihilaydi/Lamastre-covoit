@@ -351,5 +351,23 @@ planification détaillée du projet de covoiturage, structurée selon la méthod
 
 ### **🔧 Sprint 2**
 - [ ] 🚗 Développement des composants de trajets et réservations
-- [ ] 📡 Intégration de la gestion des réservations dans le backend
-- [ ]
+- [ ] 🛠 Intégration de la gestion des réservations dans le backend
+- [ ] 🎨 Création de l'interface utilisateur pour les fonctionnalités de trajets
+
+### **🔧 Sprint 3**
+- [ ] 🔍 Finalisation des fonctionnalités de recherche
+- [ ] 🧪 Tests d'intégration et de sécurité
+- [ ] 🎨 Peaufinage de l'expérience utilisateur et de l'interface
+
+### **🧪 À Tester**
+- [ ] 🔬 Tests unitaires des modèles et contrôleurs
+- [ ] 🖥️ Tests d'interface des composants React
+
+### **🚀 À Déployer**
+- [ ] 📦 Préparation des scripts de déploiement
+- [ ] ⚙️ Configuration des serveurs de production
+
+### **✅ Terminé**
+- [ ] 🎬 Lancement du projet
+- [ ] 📝 Première revue du code
+
