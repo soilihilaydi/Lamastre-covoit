@@ -1,0 +1,11 @@
+commenter, 1N utilisateur, 0N evaluation
+evaluation: idEvaluation, note, commentaire
+noter, 1N trajet, 0N evaluation
+
+utilisateur: idUtilisateur, email, motDePasse, nom, contact, photoUrl, rôle
+proposer, 1N utilisateur, 0N trajet
+trajet: idTrajet, départ, arrivée, dateHeure, placesDisponibles, prix
+
+réserver, 1N utilisateur, 0N reservation
+reservation: idReservation, status
+concerne, 1N trajet, 0N reservation
