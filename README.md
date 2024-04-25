@@ -281,13 +281,13 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ## Semaine 1 (25 - 29 Avril)
 
 ### 🚀 Jour 1 (Jeudi 25) #Lancement
-- [ ] 🎉 Organiser la cérémonie de lancement (25 avr. 2024)
-- [ ] 🔧 Configurer les outils de développement (Installation de l'IDE, Configuration des repositories Git)
+- [ x ] 🎉 Organiser la cérémonie de lancement (25 avr. 2024)
+- [x ] 🔧 Configurer les outils de développement (Installation de l'IDE, Configuration des repositories Git)
 
 ### 📅 Jour 2 (Vendredi 26) #Planification
 - [ ] 📝 Planifier le Sprint 1 (Estimation des tâches, Affectation des ressources)
 - [ ] 🗒 Définir les user stories
-- [ ] 🏗 Créer les tâches pour le backlog (Rédaction des tickets JIRA)
+- [ ] 🏗 Créer les tâches pour le backlog (Rédaction des tickets)
 
 ### 🌞 Weekend #Repos
 - [ ] 😌 Prendre du repos et se préparer pour le développement
