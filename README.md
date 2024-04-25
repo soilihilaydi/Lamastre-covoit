@@ -275,118 +275,107 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 ## 
 
-# 📆 Planification Agile Scrum pour Lamastre-covoit :
+# 🗓 Planification Agile Scrum pour le site de covoituge local Lamastre-covoit :
 
-planification détaillée du projet de covoiturage, structurée selon la méthode Agile Scrum avec une visibilité claire sur les activités hebdomadaires et quotidiennes.
+## Semaine 1 (25 - 29 Avril)
 
-## 🗓 **Semaine 1 (25 - 29 Avril)**
+### 🚀 Jour 1 (Jeudi 25) #Lancement
+- [ ] 🎉 Organiser la cérémonie de lancement (25 avr. 2024)
+- [ ] 🔧 Configurer les outils de développement (Installation de l'IDE, Configuration des repositories Git)
 
-### **🚀 Jour 1 (Jeudi 25)**
-- [ ] 🎉 Cérémonie de lancement
-- [ ] 📑 Présentation du projet
-- [ ] 🔧 Configuration des outils de développement
+### 📅 Jour 2 (Vendredi 26) #Planification
+- [ ] 📝 Planifier le Sprint 1 (Estimation des tâches, Affectation des ressources)
+- [ ] 🗒 Définir les user stories
+- [ ] 🏗 Créer les tâches pour le backlog (Rédaction des tickets JIRA)
 
-### **📅 Jour 2 (Vendredi 26)**
-- [ ] 📝 Planification du Sprint 1
-- [ ] 🗒 Définition des user stories
-- [ ] 🏗 Création des tâches pour le backlog
+### 🌞 Weekend #Repos
+- [ ] 😌 Prendre du repos et se préparer pour le développement
 
-### **🌞 Weekend**
-- [ ] 😌 Repos
+## Semaine 2 (30 Avril - 5 Mai)
 
-## 🗓 **Semaine 2 (30 Avril - 5 Mai)**
+### 👨‍💻 Lundi à Vendredi #Développement
+- [ ] 🛠 Développer Sprint 1 (Mise en place de l'environnement de base, Définition de l'architecture initiale)
+- [ ] 🗝 Développement des fonctionnalités d'authentification et de profil utilisateur
+- [ ] 🗃 Conception de la base de données
 
-### **👨‍💻 Lundi à Vendredi**
-- [ ] 🛠 Développement Sprint 1
-  - 🌐 Mise en place de l'environnement de base
-  - 🏛 Architecture initiale
-  - 🗝 Début de développement des fonctionnalités d'authentification et de profil utilisateur
+## Semaine 3 (6 - 12 Mai)
 
-## 🗓 **Semaine 3 (6 - 12 Mai)**
+### 🔍 Lundi #Revue
+- [ ] 📊 Réaliser la revue du Sprint 1
+- [ ] 🔄 Organiser la rétrospective du sprint
+- [ ] 🗓 Planifier le Sprint 2
 
-### **🔍 Lundi**
-- [ ] 📊 Revue du Sprint 1
-- [ ] 🔄 Rétrospective
-- [ ] 🗓 Planification du Sprint 2
+### 👨‍💻 Mardi à Vendredi #Développement
+- [ ] 🛠 Développer Sprint 2 (Implémenter les fonctionnalités de trajet, Construire les fonctionnalités de réservation)
+- [ ] 📋 Élaborer l'affichage des listes
 
-### **👨‍💻 Mardi à Vendredi**
-- [ ] 🛠 Développement Sprint 2
-  - 🛣 Fonctionnalités de trajet
-  - 🎟 Fonctionnalités de réservation
-  - 📋 Affichage des listes
+### 🌞 Weekend #Repos
+- [ ] 😌 Continuer à se reposer pour maintenir la productivité
 
-### **🌞 Weekend**
-- [ ] 😌 Repos
+## Semaine 4 (13 - 19 Mai)
 
-## 🗓 **Semaine 4 (13 - 19 Mai)**
+### 👨‍💻 Lundi à Vendredi #DéveloppementContinu
+- [ ] 🛠 Poursuivre le développement du Sprint 2 (Finaliser les fonctionnalités de réservation, Développer les fonctionnalités de commentaires et retour utilisateur)
 
-### **👨‍💻 Lundi à Vendredi**
-- [ ] 🛠 Continuation du Sprint 2
-  - 📝 Finalisation des fonctionnalités de réservation
-  - 💬 Développement des fonctionnalités de commentaires
+### 🌞 Weekend #Repos
+- [ ] 😌 Prendre du temps pour se ressourcer
 
-### **🌞 Weekend**
-- [ ] 😌 Repos
+## Semaine 5 (20 - 26 Mai)
 
-## 🗓 **Semaine 5 (20 - 26 Mai)**
+### 🔍 Lundi #RevueSprint
+- [ ] 📊 Effectuer la revue du Sprint 2
+- [ ] 🔄 Tenir la rétrospective du sprint
+- [ ] 🗓 Planifier le Sprint 3
 
-### **🔍 Lundi**
-- [ ] 📊 Revue du Sprint 2
-- [ ] 🔄 Rétrospective
-- [ ] 🗓 Planification du Sprint 3
+### 👨‍💻 Mardi à Vendredi #SprintFinal
+- [ ] 🛠 Travailler sur le développement du Sprint 3 (Assurer l'intégration et les tests, Implémenter les fonctionnalités de recherche)
+- [ ] 🎨 Peaufiner l'UI/UX
 
-### **👨‍💻 Mardi à Vendredi**
-- [ ] 🛠 Développement Sprint 3
-  - 🧪 Intégration et tests
-  - 🔍 Implémentation des fonctionnalités de recherche
-  - 🎨 Peaufinage de l'UI/UX
+### 🌞 Weekend #ReposFinal
+- [ ] 😌 Profiter du dernier weekend avant la finalisation
 
-### **🌞 Weekend**
-- [ ] 😌 Repos
+## Semaine 6 (27 - 28 Mai)
 
-## 🗓 **Semaine 6 (27 - 28 Mai)**
+### 👨‍💻 Lundi #Finalisation
+- [ ] 🏁 Finaliser le développement
+- [ ] 🧪 Réaliser les tests d'acceptation
+- [ ] 🚀 Préparer le déploiement
 
-### **👨‍💻 Lundi**
-- [ ] 🏁 Finalisation du développement
-- [ ] 🧪 Tests d'acceptation
-- [ ] 🚀 Préparation au déploiement
+### 🔚 Mardi (28) #Déploiement
+- [ ] 📊 Mener la revue finale
+- [ ] 🚀 Procéder au déploiement
+- [ ] 🎉 Célébrer la clôture du projet
 
-### **🔚 Mardi (28)**
-- [ ] 📊 Revue finale
-- [ ] 🚀 Déploiement
-- [ ] 🎉 Clôture du projet
+## 📋 Kanban Board
 
-## 📋 **Kanban Board**
-
-### **📝 Backlog**
-- [ ] 🔧 Mise en place de l'environnement de développement
-- [ ] 📝 Définition des user stories
+### 📝 Backlog #Backlog
+- [ ] 🔧 Mise en place de l'environnement de développement complet
+- [ ] 📝 Définition approfondie des user stories
 - [ ] 🖥 Configuration initiale des serveurs backend et frontend
 
-### **🔧 Sprint 1**
-- [ ] 🧑‍💻 Implémentation des modèles de données utilisateur
-- [ ] 🔗 Création des endpoints d'authentification
-- [ ] 🔐 Mise en place du système d'authentification sur le frontend
+### 🔧 Sprint 1 #Sprint1
+- [ ] 🧑‍💻 Implémenter les modèles de données utilisateur
+- [ ] 🔗 Créer les endpoints d'authentification
+- [ ] 🔐 Installer le système d'authentification sur le frontend
 
-### **🔧 Sprint 2**
-- [ ] 🚗 Développement des composants de trajets et réservations
-- [ ] 🛠 Intégration de la gestion des réservations dans le backend
-- [ ] 🎨 Création de l'interface utilisateur pour les fonctionnalités de trajets
+### 🔧 Sprint 2 #Sprint2
+- [ ] 🚗 Développer les composants de trajets et réservations
+- [ ] 🛠 Intégrer la gestion des réservations dans le backend
+- [ ] 🎨 Créer l'interface utilisateur pour les fonctionnalités de trajets
 
-### **🔧 Sprint 3**
-- [ ] 🔍 Finalisation des fonctionnalités de recherche
-- [ ] 🧪 Tests d'intégration et de sécurité
-- [ ] 🎨 Peaufinage de l'expérience utilisateur et de l'interface
+### 🔧 Sprint 3 #Sprint3
+- [ ] 🔍 Affiner les fonctionnalités de recherche
+- [ ] 🧪 Mener des tests d'intégration et de sécurité
+- [ ] 🎨 Améliorer l'expérience utilisateur et l'interface
 
-### **🧪 À Tester**
-- [ ] 🔬 Tests unitaires des modèles et contrôleurs
-- [ ] 🖥️ Tests d'interface des composants React
+### 🧪 À Tester #Tests
+- [ ] 🔬 Effectuer des tests unitaires des modèles et contrôleurs
+- [ ] 🖥️ Réaliser des tests d'interface pour les composants React
 
-### **🚀 À Déployer**
-- [ ] 📦 Préparation des scripts de déploiement
-- [ ] ⚙️ Configuration des serveurs de production
+### 🚀 À Déployer #Déploiement
+- [ ] 📦 Préparer les scripts de déploiement
+- [ ] ⚙️ Configurer les serveurs de production
 
-### **✅ Terminé**
-- [ ] 🎬 Lancement du projet
-- [ ] 📝 Première revue du code
-
+### ✅ Terminé #Terminé
+- [ ] 🎬 Marquer le lancement du projet
+- [ ] 📝 Effectuer la première revue du code
