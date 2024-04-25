@@ -252,7 +252,25 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
   - `vite.config.js` : Configuration spécifique à Vite.js
 
 
+# 🚀 Développement et Outils Additionnels
 
+## 1. **Git** 🌿
+   - 📝 Système de contrôle de version pour gérer les changements dans le code source du projet.
+
+## 2. **GitHub ** 🤝
+   - 🌐 Plateformes pour héberger des dépôts Git, faciliter la revue de code, l'intégration continue et le suivi des problèmes.
+
+## 3. **Postman ou Insomnia je sais pas encore** 📦
+   - 🛠️ Outils pour tester les API, permettant de simuler des requêtes client vers le serveur sans utiliser de frontend.
+
+## 4. **ESLint** 🧹
+   - 🔍 Linter pour JavaScript et TypeScript, aidant à maintenir la qualité du code en vérifiant les erreurs et les problèmes de style.
+
+## 5. **Prettier** ✨
+   - 💅 Formateur de code pour maintenir un style cohérent dans le code source.
+
+## 6. **dotenv** 🔑
+   - 🗝️ Module pour charger les variables d'environnement à partir d'un fichier `.env`.
 
 
 ## 
