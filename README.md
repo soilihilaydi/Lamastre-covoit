@@ -110,31 +110,53 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 
 # Modèle Logique de Données (MLD)
 
-| Table         | Attribut           | Type                  | Contraintes                          |
-|---------------|--------------------|-----------------------|--------------------------------------|
-| **Utilisateurs** | `id`               | INT                   | PRIMARY KEY, AUTO_INCREMENT          |
-|               | `email`            | VARCHAR(255)          | UNIQUE, NOT NULL                     |
-|               | `password`         | VARCHAR(255)          | NOT NULL                             |
-|               | `nom`              | VARCHAR(255)          | NOT NULL                             |
-|               | `contact`          | VARCHAR(255)          |                                      |
-|               | `photo_url`        | VARCHAR(255)          |                                      |
-|               | `role`             | ENUM('passager', 'conducteur') | NOT NULL                |
-| **Trajets**   | `id`               | INT                   | PRIMARY KEY, AUTO_INCREMENT          |
-|               | `conducteur_id`    | INT                   | FOREIGN KEY REFERENCES Utilisateurs(id), NOT NULL |
-|               | `depart`           | VARCHAR(255)          | NOT NULL                             |
-|               | `arrivee`          | VARCHAR(255)          | NOT NULL                             |
-|               | `date_heure`       | DATETIME              | NOT NULL                             |
-|               | `places_disponibles` | INT                 | NOT NULL                             |
-|               | `prix`             | DECIMAL(10, 2)        | NOT NULL                             |
-| **Réservations** | `id`             | INT                   | PRIMARY KEY, AUTO_INCREMENT          |
-|               | `trajet_id`        | INT                   | FOREIGN KEY REFERENCES Trajets(id), NOT NULL |
-|               | `passager_id`      | INT                   | FOREIGN KEY REFERENCES Utilisateurs(id), NOT NULL |
-|               | `status`           | ENUM('confirmée', 'en attente', 'annulée') | NOT NULL     |
-| **Évaluations** | `id`             | INT                   | PRIMARY KEY, AUTO_INCREMENT          |
-|               | `trajet_id`        | INT                   | FOREIGN KEY REFERENCES Trajets(id), NOT NULL |
-|               | `passager_id`      | INT                   | FOREIGN KEY REFERENCES Utilisateurs(id), NOT NULL |
-|               | `note`             | INT                   | NOT NULL                             |
-|               | `commentaire`      | TEXT                  |                                      |
+| Table       | Attribut          | Type            | Contraintes      | Description                                       |
+|-------------|-------------------|-----------------|------------------|---------------------------------------------------|
+| utilisateur | idUtilisateur     | Clé Primaire    | UNIQUE, NOT NULL | Identifiant unique de l'utilisateur               |
+|             | email             | VARCHAR         | NOT NULL         | Email de l'utilisateur                            |
+|             | motDePasse        | VARCHAR         | NOT NULL         | Mot de passe de l'utilisateur                    |
+|             | sel               | VARCHAR         |                  | Sel pour le hachage du mot de passe               |
+|             | nom               | VARCHAR         |                  | Nom de l'utilisateur                              |
+|             | adresse           | VARCHAR         |                  | Adresse de l'utilisateur                          |
+|             | numéroDeTéléphone | VARCHAR         |                  | Numéro de téléphone de l'utilisateur             |
+|             | photoUrl          | VARCHAR         |                  | URL de la photo de profil                         |
+|             | rôle              | VARCHAR         |                  | Rôle de l'utilisateur                             |
+|             | preferences       | VARCHAR         |                  | Préférences de l'utilisateur                      |
+|             | bio               | TEXT            |                  | Biographie de l'utilisateur                       |
+| trajet      | idTrajet          | Clé Primaire    | UNIQUE, NOT NULL | Identifiant unique du trajet                      |
+|             | départ            | VARCHAR         | NOT NULL         | Lieu de départ du trajet                          |
+|             | arrivée           | VARCHAR         | NOT NULL         | Destination du trajet                             |
+|             | dateHeure         | DATETIME        | NOT NULL         | Date et heure de départ du trajet                 |
+|             | placesDisponibles | INT             | NOT NULL         | Nombre de places disponibles                      |
+|             | prix              | DECIMAL         | NOT NULL         | Prix du trajet                                    |
+|             | dureeTrajet       | TIME            |                  | Durée prévue du trajet                            |
+|             | description       | TEXT            |                  | Description du trajet                             |
+|             | typeVehicule      | VARCHAR         |                  | Type de véhicule pour le trajet                   |
+| reservation | idReservation     | Clé Primaire    | UNIQUE, NOT NULL | Identifiant unique de la réservation              |
+|             | idUtilisateur     | Clé Étrangère   | NOT NULL         | Identifiant de l'utilisateur qui réserve          |
+|             | idTrajet          | Clé Étrangère   | NOT NULL         | Identifiant du trajet réservé                     |
+|             | status            | VARCHAR         | NOT NULL         | État de la réservation                            |
+|             | nombreDePlaces    | INT             |                  | Nombre de places réservées                        |
+|             | idUtilisateurConducteur | Clé Étrangère |               | Identifiant de l'utilisateur conducteur du trajet |
+| evaluation  | idEvaluation      | Clé Primaire    | UNIQUE, NOT NULL | Identifiant unique de l'évaluation                |
+|             | note              | INT             | NOT NULL         | Note attribuée dans l'évaluation                  |
+|             | commentaire       | TEXT            |                  | Commentaire de l'évaluation                       |
+|             | idUtilisateur     | Clé Étrangère   |                  | Identifiant de l'utilisateur qui évalue           |
+|             | idTrajet          | Clé Étrangère   |                  | Identifiant du trajet évalué                      |
+
+
+## Relations
+- `proposer` est une relation entre `utilisateur` et `trajet`.
+- `réserver` est une relation entre `utilisateur` et `reservation`.
+- `concerne` est une relation entre `trajet` et `reservation`.
+- `commenter` est une relation entre `utilisateur` et `evaluation`.
+- `noter` est une relation entre `trajet` et `evaluation`.
+
+## Remarques
+- Les relations `commenter` et `noter` ne sont pas directement représentées en tant que tables dans le MLD, elles sont impliquées par les clés étrangères dans les tables `evaluation` et `reservation`.
+- Les types de données pour chaque attribut (VARCHAR, DATETIME, INT, DECIMAL) sont à définir selon les spécifications de votre système de gestion de base de données.
+- La table `evaluation` devrait inclure des clés étrangères pour `idUtilisateur` et `idTrajet` si l'évaluation est spécifique à un utilisateur pour un trajet donné.
+
 
 # API Endpoints
 
