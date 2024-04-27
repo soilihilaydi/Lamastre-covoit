@@ -1,10 +1,10 @@
-# 🚗 Lamastre-covoit - Site de Covoiturage Local .
+# 🚗 Lamastre-covoit - Site de Covoiturage Local
 
 Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette documentation couvre la planification, la structure des technologies et les modèles de données du backend et du frontend, ainsi que les user stories associées au projet.
 
-## 🏗 Planification et Architecture du Backend :
+## 🏗 Planification et Architecture du Backend
 
-### 🛠 Technologies Backend :
+### 🛠 Technologies Backend
 
 | #  | Technologie        | Description                                                                                              |
 |----|--------------------|----------------------------------------------------------------------------------------------------------|
@@ -19,9 +19,7 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | 9  | **Supertest**      | 🌐 Bibliothèque pour tester les API HTTP en conjonction avec Jest.
 | 10 | **mysql2**      | 🌐 Module qui sert a faire des interactions avec une base de données MySQL et améliorer les performances .                                         |
 
-### 📁 Structure du Dossier Backend avec Tests :
-
-
+### 📁 Structure du Dossier Backend avec Tests
 
 - `/backend`
   - `/node_modules` : Dossier pour les modules Node.js installés.
@@ -63,10 +61,9 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
   - `.env` : Fichier pour les variables d'environnement.
   - `.gitignore` : Fichier pour ignorer les fichiers/dossiers dans git.
 
+##
 
-## 
-
-# User Stories :
+# User Stories
 
 | Rôle | En tant que... | Je veux pouvoir... | Afin de... |
 |------|----------------|--------------------|------------|
@@ -80,18 +77,13 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | Utilisateur Authentifié | utilisateur authentifié | laisser une évaluation et un commentaire après un trajet | partager mon expérience avec la communauté |
 | Administrateur | administrateur | voir tous les utilisateurs, trajets et réservations | gérer le système de covoiturage efficacement |
 
-## 
+##
 
-
-# Modèle Conceptuel de Données (MCD) :
-
-
+# Modèle Conceptuel de Données (MCD)
 
 ![Description alternative](./MCD.svg "MCD du site de coivoituge local")
 
-
-
-## Entités :
+## Entités
 
 | Entité       | Attributs                                             | Description                                                  |
 |--------------|-------------------------------------------------------|--------------------------------------------------------------|
@@ -100,7 +92,7 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | Réservations | `id`, `trajet_id`, `passager_id`, `status`           | Réservations effectuées par les passagers pour des trajets.  |
 | Évaluations  | `id`, `trajet_id`, `passager_id`, `note`, `commentaire` | Évaluations laissées par les passagers après un trajet.      |
 
-## Relations et Cardinalités :
+## Relations et Cardinalités
 
 | Relation   | Description                                                 |
 |------------|-------------------------------------------------------------|
@@ -116,8 +108,7 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | Trajets à Évaluations    | Un trajet peut avoir plusieurs évaluations. Une évaluation concerne un seul trajet. |
 | Utilisateurs à Évaluations | Un utilisateur (passager) peut laisser plusieurs évaluations. Une évaluation est laissée par un seul utilisateur. |
 
-
-# Modèle Logique de Données (MLD) :
+# Modèle Logique de Données (MLD)
 
 | Table         | Attribut           | Type                  | Contraintes                          |
 |---------------|--------------------|-----------------------|--------------------------------------|
@@ -145,10 +136,7 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 |               | `note`             | INT                   | NOT NULL                             |
 |               | `commentaire`      | TEXT                  |                                      |
 
-
-
-
-# API Endpoints :
+# API Endpoints
 
 | Catégorie              | Méthode HTTP | Endpoint                 | Description                                         |
 |------------------------|--------------|--------------------------|-----------------------------------------------------|
@@ -170,15 +158,13 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 |                        | GET          | `/admin/trajets`         | Lister tous les trajets.                            |
 |                        | GET          | `/admin/reservations`    | Lister toutes les réservations.                     |
 
+##
 
-
-## 
-
-# 🌐 Technologies Frontend :
+# 🌐 Technologies Frontend
 
 Bienvenue dans la section des technologies frontend utilisées pour le développement de l'interface utilisateur de notre site de covoiturage. Chaque technologie est sélectionnée pour optimiser le développement et offrir une expérience utilisateur fluide et réactive.
 
-## 🖥️ Technologies Utilisées :
+## 🖥️ Technologies Utilisées
 
 | #  | Technologie         | Description                                                                                              |
 |----|---------------------|----------------------------------------------------------------------------------------------------------|
@@ -193,9 +179,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 | 9  | **Jest**            | 📊 Framework de tests JavaScript populaire pour les tests unitaires, assurant que le code respecte les fonctionnalités attendues.       |
 | 10 | **JSX** | ⚛️ Syntaxe qui étend JavaScript permettant d'écrire des éléments HTML dans les scripts React, facilitant la création d'interfaces utilisateur dynamiques. |
 
-## 📂 Structure du Dossier Frontend :
-
-
+## 📂 Structure du Dossier Frontend
 
 - `/frontend`
   - `/public`
@@ -252,49 +236,57 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
   - `package.json` : Gère les dépendances et scripts npm
   - `vite.config.js` : Configuration spécifique à Vite.js
 
-
 # 🚀 Développement et Outils Additionnels
 
 ## 1. **Git** 🌿
-   - 📝 Système de contrôle de version pour gérer les changements dans le code source du projet.
 
-## 2. **GitHub ** 🤝
-   - 🌐 Plateformes pour héberger des dépôts Git, faciliter la revue de code, l'intégration continue et le suivi des problèmes.
+- 📝 Système de contrôle de version pour gérer les changements dans le code source du projet.
+
+## 2. **GitHub** 🤝
+
+- 🌐 Plateformes pour héberger des dépôts Git, faciliter la revue de code, l'intégration continue et le suivi des problèmes.
 
 ## 3. **Postman ou Insomnia je sais pas encore** 📦
-   - 🛠️ Outils pour tester les API, permettant de simuler des requêtes client vers le serveur sans utiliser de frontend.
+
+- 🛠️ Outils pour tester les API, permettant de simuler des requêtes client vers le serveur sans utiliser de frontend.
 
 ## 4. **ESLint** 🧹
-   - 🔍 Linter pour JavaScript et TypeScript, aidant à maintenir la qualité du code en vérifiant les erreurs et les problèmes de style.
+
+- 🔍 Linter pour JavaScript et TypeScript, aidant à maintenir la qualité du code en vérifiant les erreurs et les problèmes de style.
 
 ## 5. **Prettier** ✨
-   - 💅 Formateur de code pour maintenir un style cohérent dans le code source.
+
+- 💅 Formateur de code pour maintenir un style cohérent dans le code source.
 
 ## 6. **dotenv** 🔑
-   - 🗝️ Module pour charger les variables d'environnement à partir d'un fichier `.env`.
 
+- 🗝️ Module pour charger les variables d'environnement à partir d'un fichier `.env`.
 
-## 
+##
 
-# 🗓 Planification Agile Scrum pour le site de covoituge local Lamastre-covoit :
+# 🗓 Planification Agile Scrum pour le site de covoituge local Lamastre-covoit
 
 ## Semaine 1 (25 - 29 Avril)
 
 ### 🚀 Jour 1 (Jeudi 25) #Lancement
+
 - [x] 🎉 Organiser la cérémonie de lancement (25 avr. 2024)
 - [x] 🔧 Configurer les outils de développement (Installation de l'IDE, Configuration des repositories Git)
 
 ### 📅 Jour 2 (Vendredi 26) #Planification
+
 - [x] 📝 Planifier le Sprint 1 (Estimation des tâches, Affectation des ressources)
 - [x] 🗒 Définir les user stories
 - [x] 🏗 Créer les tâches pour le backlog (Rédaction des tickets)
 
 ### 🌞 Weekend #Repos
+
 - [ ] 😌 Prendre du repos et se préparer pour le développement
 
 ## Semaine 2 (30 Avril - 5 Mai)
 
 ### 👨‍💻 Lundi à Vendredi #Développement
+
 - [x] 🛠 Développer Sprint 1 (Mise en place de l'environnement de base, Définition de l'architecture initiale)
 - [ ] 🗝 Développement des fonctionnalités d'authentification et de profil utilisateur
 - [ ] 🗃 Conception de la base de données
@@ -302,47 +294,57 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ## Semaine 3 (6 - 12 Mai)
 
 ### 🔍 Lundi #Revue
+
 - [ ] 📊 Réaliser la revue du Sprint 1
 - [ ] 🔄 Organiser la rétrospective du sprint
 - [ ] 🗓 Planifier le Sprint 2
 
 ### 👨‍💻 Mardi à Vendredi #Développement
+
 - [ ] 🛠 Développer Sprint 2 (Implémenter les fonctionnalités de trajet, Construire les fonctionnalités de réservation)
 - [ ] 📋 Élaborer l'affichage des listes
 
 ### 🌞 Weekend #Repos
+
 - [ ] 😌 Continuer à se reposer pour maintenir la productivité
 
 ## Semaine 4 (13 - 19 Mai)
 
 ### 👨‍💻 Lundi à Vendredi #DéveloppementContinu
+
 - [ ] 🛠 Poursuivre le développement du Sprint 2 (Finaliser les fonctionnalités de réservation, Développer les fonctionnalités de commentaires et retour utilisateur)
 
 ### 🌞 Weekend #Repos
+
 - [ ] 😌 Prendre du temps pour se ressourcer
 
 ## Semaine 5 (20 - 26 Mai)
 
 ### 🔍 Lundi #RevueSprint
+
 - [ ] 📊 Effectuer la revue du Sprint 2
 - [ ] 🔄 Tenir la rétrospective du sprint
 - [ ] 🗓 Planifier le Sprint 3
 
 ### 👨‍💻 Mardi à Vendredi #SprintFinal
+
 - [ ] 🛠 Travailler sur le développement du Sprint 3 (Assurer l'intégration et les tests, Implémenter les fonctionnalités de recherche)
 - [ ] 🎨 Peaufiner l'UI/UX
 
 ### 🌞 Weekend #ReposFinal
+
 - [ ] 😌 Profiter du dernier weekend avant la finalisation
 
 ## Semaine 6 (27 - 28 Mai)
 
 ### 👨‍💻 Lundi #Finalisation
+
 - [ ] 🏁 Finaliser le développement
 - [ ] 🧪 Réaliser les tests d'acceptation
 - [ ] 🚀 Préparer le déploiement
 
 ### 🔚 Mardi (28) #Déploiement
+
 - [ ] 📊 Mener la revue finale
 - [ ] 🚀 Procéder au déploiement
 - [ ] 🎉 Célébrer la clôture du projet
@@ -350,33 +352,40 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ## 📋 Kanban Board
 
 ### 📝 Backlog #Backlog
+
 - [x] 🔧 Mise en place de l'environnement de développement complet
 - [x] 📝 Définition approfondie des user stories
 - [x] 🖥 Configuration initiale des serveurs backend et frontend
 
 ### 🔧 Sprint 1 #Sprint1
+
 - [ ] 🧑‍💻 Implémenter les modèles de données utilisateur
 - [ ] 🔗 Créer les endpoints d'authentification
 - [ ] 🔐 Installer le système d'authentification sur le frontend
 
 ### 🔧 Sprint 2 #Sprint2
+
 - [ ] 🚗 Développer les composants de trajets et réservations
 - [ ] 🛠 Intégrer la gestion des réservations dans le backend
 - [ ] 🎨 Créer l'interface utilisateur pour les fonctionnalités de trajets
 
 ### 🔧 Sprint 3 #Sprint3
+
 - [ ] 🔍 Affiner les fonctionnalités de recherche
 - [ ] 🧪 Mener des tests d'intégration et de sécurité
 - [ ] 🎨 Améliorer l'expérience utilisateur et l'interface
 
 ### 🧪 À Tester #Tests
+
 - [ ] 🔬 Effectuer des tests unitaires des modèles et contrôleurs
 - [ ] 🖥️ Réaliser des tests d'interface pour les composants React
 
 ### 🚀 À Déployer #Déploiement
+
 - [ ] 📦 Préparer les scripts de déploiement
 - [ ] ⚙️ Configurer les serveurs de production
 
 ### ✅ Terminé #Terminé
+
 - [ ] 🎬 Marquer le lancement du projet
 - [ ] 📝 Effectuer la première revue du code
