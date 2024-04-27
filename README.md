@@ -281,13 +281,13 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ## Semaine 1 (25 - 29 Avril)
 
 ### 🚀 Jour 1 (Jeudi 25) #Lancement
-- [ x ] 🎉 Organiser la cérémonie de lancement (25 avr. 2024)
-- [x ] 🔧 Configurer les outils de développement (Installation de l'IDE, Configuration des repositories Git)
+- [x] 🎉 Organiser la cérémonie de lancement (25 avr. 2024)
+- [x] 🔧 Configurer les outils de développement (Installation de l'IDE, Configuration des repositories Git)
 
 ### 📅 Jour 2 (Vendredi 26) #Planification
-- [ ] 📝 Planifier le Sprint 1 (Estimation des tâches, Affectation des ressources)
-- [ ] 🗒 Définir les user stories
-- [ ] 🏗 Créer les tâches pour le backlog (Rédaction des tickets)
+- [x] 📝 Planifier le Sprint 1 (Estimation des tâches, Affectation des ressources)
+- [x] 🗒 Définir les user stories
+- [x] 🏗 Créer les tâches pour le backlog (Rédaction des tickets)
 
 ### 🌞 Weekend #Repos
 - [ ] 😌 Prendre du repos et se préparer pour le développement
@@ -295,7 +295,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ## Semaine 2 (30 Avril - 5 Mai)
 
 ### 👨‍💻 Lundi à Vendredi #Développement
-- [ ] 🛠 Développer Sprint 1 (Mise en place de l'environnement de base, Définition de l'architecture initiale)
+- [x] 🛠 Développer Sprint 1 (Mise en place de l'environnement de base, Définition de l'architecture initiale)
 - [ ] 🗝 Développement des fonctionnalités d'authentification et de profil utilisateur
 - [ ] 🗃 Conception de la base de données
 
@@ -350,9 +350,9 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ## 📋 Kanban Board
 
 ### 📝 Backlog #Backlog
-- [ ] 🔧 Mise en place de l'environnement de développement complet
-- [ ] 📝 Définition approfondie des user stories
-- [ ] 🖥 Configuration initiale des serveurs backend et frontend
+- [x] 🔧 Mise en place de l'environnement de développement complet
+- [x] 📝 Définition approfondie des user stories
+- [x] 🖥 Configuration initiale des serveurs backend et frontend
 
 ### 🔧 Sprint 1 #Sprint1
 - [ ] 🧑‍💻 Implémenter les modèles de données utilisateur
