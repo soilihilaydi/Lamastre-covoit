@@ -261,7 +261,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ## 2. **GitHub ** 🤝
    - 🌐 Plateformes pour héberger des dépôts Git, faciliter la revue de code, l'intégration continue et le suivi des problèmes.
 
-## 3. **Postman ou Insomnia je sais pas encore** 📦
+## 3. **Insomnia** 📦
    - 🛠️ Outils pour tester les API, permettant de simuler des requêtes client vers le serveur sans utiliser de frontend.
 
 ## 4. **ESLint** 🧹
