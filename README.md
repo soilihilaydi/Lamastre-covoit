@@ -79,6 +79,20 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 
 ##
 
+# Dictionnaire de Données
+
+
+| Entité       | Attributs                                                                                                                                      |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| Évaluation    | - **idEvaluation**: Identifiant unique pour l'évaluation.<br> - **Note**: La note attribuée.<br> - **Commentaire**: Un commentaire associé à l'évaluation. |
+| Utilisateur  | - **idUtilisateur**: Identifiant unique pour l'utilisateur.<br> - **Email**: Adresse email de l'utilisateur.<br> - **MotDePasse**: Mot de passe de l'utilisateur.<br> - **Nom**: Nom de l'utilisateur.<br> - **Adresse**: Adresse de l'utilisateur.<br> - **NuméroDeTéléphone**: Numéro de téléphone de l'utilisateur.<br> - **PhotoUrl**: URL de la photo de profil de l'utilisateur.<br> - **Rôle**: Le rôle de l'utilisateur (par exemple, admin ou utilisateur standard). |
+| Trajet       | - **idTrajet**: Identifiant unique pour le trajet.<br> - **Départ**: Lieu de départ.<br> - **Arrivée**: Lieu d'arrivée.<br> - **DateHeure**: Date et heure du trajet.<br> - **PlacesDisponibles**: Nombre de places disponibles.<br> - **Prix**: Le prix du trajet. |
+| Réservation  | - **idReservation**: Identifiant unique pour la réservation.<br> - **Status**: Statut de la réservation (confirmée, annulée, etc.).            |
+| Entités Additionnelles | - **Commenter**, **Noter**, **Proposer**, **Réserver**, **Concerner**: Ces entités sont identifiées dans le modèle mais n'ont pas encore d'attributs associés. |
+
+
+
+
 # Modèle Conceptuel de Données (MCD)
 
 ![Description alternative](./MCD.svg "MCD du site de coivoituge local")
