@@ -19,47 +19,76 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | 9  | **Supertest**      | 🌐 Bibliothèque pour tester les API HTTP en conjonction avec Jest.
 | 10 | **mysql2**      | 🌐 Module qui sert a faire des interactions avec une base de données MySQL et améliorer les performances .                                         |
 
-### 📁 Structure du Dossier Backend avec Tests
+## 📁 Structure du Dossier Backend avec Tests
 
-- `/backend`
-  - `/node_modules` : Dossier pour les modules Node.js installés.
-  - `/config`
-    - `db.config.js` : Configuration de la base de données.
-  - `/controllers`
-    - `utilisateurController.js` : Gère les actions liées aux utilisateurs.
-    - `trajetController.js` : Gère les actions liées aux trajets.
-    - `reservationController.js` : Gère les actions liées aux réservations.
-    - `commentaireController.js` : Gère les actions liées aux commentaires.
-  - `/models`
-    - `utilisateurModel.js` : Modèle pour les utilisateurs.
-    - `trajetModel.js` : Modèle pour les trajets.
-    - `reservationModel.js` : Modèle pour les réservations.
-    - `commentaireModel.js` : Modèle pour les commentaires.
-  - `/routes`
-    - `utilisateurRoutes.js` : Routes pour les actions sur les utilisateurs.
-    - `trajetRoutes.js` : Routes pour les actions sur les trajets.
-    - `reservationRoutes.js` : Routes pour les actions sur les réservations.
-    - `commentaireRoutes.js` : Routes pour les actions sur les commentaires.
-  - `/middlewares`
-    - `authMiddleware.js` : Middleware pour l'authentification.
-  - `/helpers`
-    - `utilityHelper.js` : Fonctions utilitaires diverses.
-  - `/tests`
-    - `/controllers`
-      - `utilisateurController.test.js` : Tests pour le contrôleur des utilisateurs.
-      - `trajetController.test.js` : Tests pour le contrôleur des trajets.
-      - `reservationController.test.js` : Tests pour le contrôleur des réservations.
-      - `commentaireController.test.js` : Tests pour le contrôleur des commentaires.
-    - `/models` : Tests pour les modèles (si nécessaire).
-    - `/routes`
-      - `utilisateurRoutes.test.js` : Tests pour les routes des utilisateurs.
-      - `trajetRoutes.test.js` : Tests pour les routes des trajets.
-      - `reservationRoutes.test.js` : Tests pour les routes des réservations.
-      - `commentaireRoutes.test.js` : Tests pour les routes des commentaires.
-  - `app.js` : Point d'entrée principal de l'application Node.js.
-  - `package.json` : Fichier de gestion des packages Node.js.
-  - `.env` : Fichier pour les variables d'environnement.
-  - `.gitignore` : Fichier pour ignorer les fichiers/dossiers dans git.
+Le backend de l'application est organisé comme suit:
+
+- **`/backend`**: Dossier racine du projet.
+
+  - **`/node_modules`**: Contient les modules Node.js installés.
+  
+  - **`/src`**: Dossier principal pour le code source de l'application.
+    - **`/config`**: Contient les fichiers de configuration.
+      - **`db.config.js`**: Gère la connexion à la base de données.
+      
+    - **`/controllers`**: Gère les actions liées aux différentes entités.
+      - **`utilisateurController.js`**: Actions CRUD pour les utilisateurs.
+      - **`trajetController.js`**: Actions pour les trajets.
+      - **`reservationController.js`**: Actions pour les réservations.
+      - **`commentaireController.js`**: Actions pour les commentaires.
+      
+    - **`/models`**: Définit les structures des entités de la base de données.
+      - **`utilisateurModel.js`**: Structure de la table des utilisateurs.
+      - **`trajetModel.js`**: Structure de la table des trajets.
+      - **`reservationModel.js`**: Structure des réservations.
+      - **`commentaireModel.js`**: Structure des commentaires.
+      
+    - **`/routes`**: Définit les routes HTTP associées aux contrôleurs.
+      - **`utilisateurRoutes.js`**: Routes pour les actions sur les utilisateurs.
+      - **`trajetRoutes.js`**: Routes pour les actions sur les trajets.
+      - **`reservationRoutes.js`**: Routes pour les actions sur les réservations.
+      - **`commentaireRoutes.js`**: Routes pour les actions sur les commentaires.
+      
+    - **`/middlewares`**: Contient les middlewares pour les contrôles et validations.
+      - **`authMiddleware.js`**: Middleware pour l'authentification.
+      
+    - **`/helpers`**: Contient les fonctions utilitaires pour les tâches courantes.
+      - **`utilityHelper.js`**: Fonctions utilitaires diverses.
+      
+  - **`/tests`**: Contient les tests pour vérifier les différentes couches.
+    - **`/controllers`**: Tests pour les contrôleurs.
+      - **`utilisateurController.test.js`**: Tests pour le contrôleur des utilisateurs.
+      - **`trajetController.test.js`**: Tests pour le contrôleur des trajets.
+      - **`reservationController.test.js`**: Tests pour le contrôleur des réservations.
+      - **`commentaireController.test.js`**: Tests pour le contrôleur des commentaires.
+    - **`/models`**: Tests pour les modèles.
+      - **`utilisateurModel.test.js`**: Tests pour le modèle des utilisateurs.
+      - **`trajetModel.test.js`**: Tests pour le modèle des trajets.
+      - **`reservationModel.test.js`**: Tests pour le modèle des réservations.
+      - **`commentaireModel.test.js`**: Tests pour le modèle des commentaires.
+    - **`/routes`**: Tests pour les routes.
+      - **`utilisateurRoutes.test.js`**: Tests pour les routes des utilisateurs.
+      - **`trajetRoutes.test.js`**: Tests pour les routes des trajets.
+      - **`reservationRoutes.test.js`**: Tests pour les routes des réservations.
+      - **`commentaireRoutes.test.js`**: Tests pour les routes des commentaires.
+
+  - **`/public`**: Contient les fichiers statiques.
+    - **`404.html`**: Page d'erreur 404.
+    - **`500.html`**: Page d'erreur 500.
+    - **`/images`**: Contient les images associées.
+      - **`404.png`**: Image pour la page d'erreur 404.
+      - **`500.png`**: Image pour la page d'erreur 500.
+
+  - **`server.js`**: Démarre le serveur et appelle `app.js`.
+  
+  - **`app.js`**: Configure les routes, middlewares, et autres aspects de l'application.
+
+  - **`package.json`**: Gère les dépendances du projet.
+
+  - **`.env`**: Stocke les variables d'environnement.
+
+  - **`.gitignore`**: Fichier pour ignorer certains fichiers ou dossiers dans Git.
+
 
 ##
 
@@ -317,7 +346,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 ### 🌞 Weekend #Repos
 
-- [ ] 😌 Prendre du repos et se préparer pour le développement
+- [x] 😌 Prendre du repos et se préparer pour le développement
 
 ## Semaine 2 (30 Avril - 5 Mai)
 
@@ -325,7 +354,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 - [x] 🛠 Développer Sprint 1 (Mise en place de l'environnement de base, Définition de l'architecture initiale)
 - [ ] 🗝 Développement des fonctionnalités d'authentification et de profil utilisateur
-- [ ] 🗃 Conception de la base de données
+- [x] 🗃 Conception de la base de données
 
 ## Semaine 3 (6 - 12 Mai)
 
