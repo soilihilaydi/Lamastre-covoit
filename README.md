@@ -151,6 +151,18 @@ Le backend de l'application est organisé comme suit:
 | Trajets à Évaluations    | Un trajet peut avoir plusieurs évaluations. Une évaluation concerne un seul trajet. |
 | Utilisateurs à Évaluations | Un utilisateur (passager) peut laisser plusieurs évaluations. Une évaluation est laissée par un seul utilisateur. |
 
+## Relations
+- `proposer` est une relation entre `utilisateur` et `trajet`.
+- `réserver` est une relation entre `utilisateur` et `reservation`.
+- `concerne` est une relation entre `trajet` et `reservation`.
+- `commenter` est une relation entre `utilisateur` et `evaluation`.
+- `noter` est une relation entre `trajet` et `evaluation`.
+
+## Remarques
+- Les relations `commenter` et `noter` ne sont pas directement représentées en tant que tables dans le MLD, elles sont impliquées par les clés étrangères dans les tables `evaluation` et `reservation`.
+- Les types de données pour chaque attribut (VARCHAR, DATETIME, INT, DECIMAL) sont à définir selon les spécifications de votre système de gestion de base de données.
+- La table `evaluation` devrait inclure des clés étrangères pour `idUtilisateur` et `idTrajet` si l'évaluation est spécifique à un utilisateur pour un trajet donné.
+
 # Modèle Logique de Données (MLD)
 
 | Table       | Attribut          | Type            | Contraintes      | Description                                       |
@@ -188,17 +200,7 @@ Le backend de l'application est organisé comme suit:
 |             | idTrajet          | Clé Étrangère   |                  | Identifiant du trajet évalué                      |
 
 
-## Relations
-- `proposer` est une relation entre `utilisateur` et `trajet`.
-- `réserver` est une relation entre `utilisateur` et `reservation`.
-- `concerne` est une relation entre `trajet` et `reservation`.
-- `commenter` est une relation entre `utilisateur` et `evaluation`.
-- `noter` est une relation entre `trajet` et `evaluation`.
 
-## Remarques
-- Les relations `commenter` et `noter` ne sont pas directement représentées en tant que tables dans le MLD, elles sont impliquées par les clés étrangères dans les tables `evaluation` et `reservation`.
-- Les types de données pour chaque attribut (VARCHAR, DATETIME, INT, DECIMAL) sont à définir selon les spécifications de votre système de gestion de base de données.
-- La table `evaluation` devrait inclure des clés étrangères pour `idUtilisateur` et `idTrajet` si l'évaluation est spécifique à un utilisateur pour un trajet donné.
 
 
 # API Endpoints
@@ -424,7 +426,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 ### 🔧 Sprint 1 #Sprint1
 
-- [ ] 🧑‍💻 Implémenter les modèles de données utilisateur
+- [x] 🧑‍💻 Implémenter les modèles de données utilisateur
 - [ ] 🔗 Créer les endpoints d'authentification
 - [ ] 🔐 Installer le système d'authentification sur le frontend
 
