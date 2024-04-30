@@ -107,6 +107,132 @@ Le backend de l'application est organisé comme suit:
 | Administrateur | administrateur | voir tous les utilisateurs, trajets et réservations | gérer le système de covoiturage efficacement |
 
 ##
+# Modèle Conceptuel de Données (MCD)
+
+
+
+![Description alternative](./MCD.svg "MCD du site de coivoituge local")
+
+- **commenter** (<ins>_#idUtilisateur_</ins>, <ins>_#idEvaluation_</ins>)
+- **concerner** (<ins>_#idTrajet_</ins>, <ins>_#idReservation_</ins>)
+- **evaluation** (<ins>idEvaluation</ins>, note, commentaire)
+- **noter** (<ins>_#idTrajet_</ins>, <ins>_#idEvaluation_</ins>)
+- **proposer** (<ins>_#idUtilisateur_</ins>, <ins>_#idTrajet_</ins>)
+- **reservation** (<ins>idReservation</ins>, status)
+- **réserver** (<ins>_#idUtilisateur_</ins>, <ins>_#idReservation_</ins>)
+- **trajet** (<ins>idTrajet</ins>, départ, arrivée, dateHeure, placesDisponibles, prix)
+- **utilisateur** (<ins>idUtilisateur</ins>, email, motDePasse, nom, adresse, numéroDeTéléphone, photoUrl, rôle)
+
+## Entités
+
+
+| **Entité**     | **Attributs**                                        | **Description**                                                              |
+|---------------|-------------------------------------------------------|-------------------------------------------------------------------------------|
+| **Utilisateur** | `idUtilisateur`, `email`, `motDePasse`, `nom`, `adresse`, `numéroDeTéléphone`, `photoUrl`, `rôle` | Détails sur les utilisateurs, y compris les conducteurs et les passagers.   |
+| **Trajet**      | `idTrajet`, `départ`, `arrivée`, `dateHeure`, `placesDisponibles`, `prix` | Informations sur les trajets offerts par les conducteurs, incluant la destination, la date, et les détails du trajet. |
+| **Réservation** | `idReservation`, `status`                            | Réservations effectuées par les passagers pour les trajets.                 |
+| **Évaluation**  | `idEvaluation`, `note`, `commentaire`                | Évaluations laissées par les passagers après un trajet, y compris la note et le commentaire. |
+
+
+
+### Associations
+
+- Utilisateur - Réserve - Trajet (1:N)
+- Utilisateur - Réserve - Réservation (1:N)
+- Utilisateur - Évalue - Trajet (1:N)
+- Utilisateur - Évalue - Évaluation (1:N)
+
+
+### Relations entre les Entités
+
+- **Utilisateur et Trajet:** Un utilisateur peut proposer plusieurs trajets, chaque trajet étant relié à un conducteur.
+- **Trajet et Réservation:** Un trajet peut être réservé par plusieurs utilisateurs, les réservations étant associées aux trajets spécifiques.
+- **Trajet et Évaluation:** Un trajet peut être évalué par les passagers, permettant de recueillir des notes et des commentaires.
+- **Réservation et Évaluation:** Une évaluation peut être associée à une réservation, permettant aux passagers d'évaluer leurs trajets.
+
+### Notes Supplémentaires
+
+- **Détails Précis:** Chaque entité contient des informations spécifiques pour refléter son rôle dans l'application.
+- **Interactions:** Les entités interagissent entre elles de manière cohérente, facilitant la gestion des fonctionnalités principales de l'application de covoiturage.
+
+
+
+## Modèle Logique de Données (MLD)
+
+| Table         | Attribut           | Type                  | Contraintes                          |
+|---------------|--------------------|-----------------------|--------------------------------------|
+| **Utilisateurs** | `idUtilisateur`     | INT                   | PRIMARY KEY                          |
+|               | `Email`            | VARCHAR(100)          | NOT NULL                             |
+|               | `MotDePasse`       | VARCHAR(255)          | NOT NULL                             |
+|               | `Nom`              | VARCHAR(100)          | NOT NULL                             |
+|               | `Adresse`          | VARCHAR(255)          |                                      |
+|               | `NuméroDeTéléphone`| VARCHAR(20)           |                                      |
+|               | `PhotoUrl`         | VARCHAR(255)          |                                      |
+|               | `Rôle`             | VARCHAR(50)           |                                      |
+| **Trajets**   | `idTrajet`         | INT                   | PRIMARY KEY                          |
+|               | `Départ`           | VARCHAR(100)          | NOT NULL                             |
+|               | `Arrivée`          | VARCHAR(100)          | NOT NULL                             |
+|               | `DateHeure`        | DATETIME              | NOT NULL                             |
+|               | `PlacesDisponibles`| INT                   | NOT NULL                             |
+|               | `Prix`             | FLOAT                 | NOT NULL                             |
+| **Réservations** | `idReservation` | INT                   | PRIMARY KEY                          |
+|               | `Status`           | VARCHAR(50)           | NOT NULL                             |
+|               | `idUtilisateur`    | INT                   | FOREIGN KEY REFERENCES Utilisateurs(idUtilisateur) |
+|               | `idTrajet`         | INT                   | FOREIGN KEY REFERENCES Trajets(idTrajet) |
+| **Évaluations** | `idEvaluation`   | INT                   | PRIMARY KEY                          |
+|               | `Note`             | FLOAT                 | NOT NULL                             |
+|               | `Commentaire`      | TEXT                  |                                      |
+|               | `idUtilisateur`    | INT                   | FOREIGN KEY REFERENCES Utilisateurs(idUtilisateur) |
+|               | `idTrajet`         | INT                   | FOREIGN KEY REFERENCES Trajets(idTrajet) |
+
+
+## Modèle Physique de Données (MPD)
+
+### Utilisateurs
+
+| Champ             | Type            | Description                          |
+|-------------------|-----------------|--------------------------------------|
+| idUtilisateur     | INT             | ID unique de l'utilisateur           |
+| Email             | VARCHAR(100)    | Adresse email de l'utilisateur      |
+| MotDePasse        | VARCHAR(255)    | Mot de passe de l'utilisateur       |
+| Nom               | VARCHAR(100)    | Nom complet de l'utilisateur         |
+| Adresse           | VARCHAR(255)    | Adresse postale de l'utilisateur    |
+| NuméroDeTéléphone| VARCHAR(20)     | Numéro de téléphone de l'utilisateur|
+| PhotoUrl          | VARCHAR(255)    | URL de la photo de l'utilisateur    |
+| Rôle              | VARCHAR(50)     | Rôle de l'utilisateur                |
+
+### Trajets
+
+| Champ             | Type            | Description                          |
+|-------------------|-----------------|--------------------------------------|
+| idTrajet          | INT             | ID unique du trajet                  |
+| Départ            | VARCHAR(100)    | Point de départ du trajet            |
+| Arrivée           | VARCHAR(100)    | Point d'arrivée du trajet           |
+| DateHeure         | DATETIME        | Date et heure du trajet              |
+| PlacesDisponibles | INT             | Nombre de places disponibles         |
+| Prix              | FLOAT           | Prix du trajet                       |
+
+### Réservations
+
+| Champ             | Type            | Description                          |
+|-------------------|-----------------|--------------------------------------|
+| idReservation     | INT             | ID unique de la réservation          |
+| Status            | VARCHAR(50)     | Statut de la réservation             |
+| idUtilisateur     | INT             | ID de l'utilisateur qui réserve      |
+| idTrajet          | INT             | ID du trajet réservé                 |
+
+### Évaluations
+
+| Champ             | Type            | Description                          |
+|-------------------|-----------------|--------------------------------------|
+| idEvaluation      | INT             | ID unique de l'évaluation            |
+| Note              | FLOAT           | Note attribuée                       |
+| Commentaire       | TEXT            | Commentaire de l'utilisateur         |
+| idUtilisateur     | INT             | ID de l'utilisateur qui évalue       |
+| idTrajet          | INT             | ID du trajet évalué                  |
+
+
+
 
 # Dictionnaire de Données
 
@@ -118,88 +244,6 @@ Le backend de l'application est organisé comme suit:
 | Trajet       | - **idTrajet**: Identifiant unique pour le trajet.<br> - **Départ**: Lieu de départ.<br> - **Arrivée**: Lieu d'arrivée.<br> - **DateHeure**: Date et heure du trajet.<br> - **PlacesDisponibles**: Nombre de places disponibles.<br> - **Prix**: Le prix du trajet. |
 | Réservation  | - **idReservation**: Identifiant unique pour la réservation.<br> - **Status**: Statut de la réservation (confirmée, annulée, etc.).            |
 | Entités Additionnelles | - **Commenter**, **Noter**, **Proposer**, **Réserver**, **Concerner**: Ces entités sont identifiées dans le modèle mais n'ont pas encore d'attributs associés. |
-
-
-
-
-# Modèle Conceptuel de Données (MCD)
-
-![Description alternative](./MCD.svg "MCD du site de coivoituge local")
-
-## Entités
-
-| Entité       | Attributs                                             | Description                                                  |
-|--------------|-------------------------------------------------------|--------------------------------------------------------------|
-| Utilisateurs | `id`, `email`, `password`, `nom`, `contact`, `photo_url`, `role` | Détails des utilisateurs incluant les conducteurs et les passagers. |
-| Trajets      | `id`, `conducteur_id`, `depart`, `arrivee`, `date_heure`, `places_disponibles`, `prix` | Informations sur les trajets offerts par les conducteurs.    |
-| Réservations | `id`, `trajet_id`, `passager_id`, `status`           | Réservations effectuées par les passagers pour des trajets.  |
-| Évaluations  | `id`, `trajet_id`, `passager_id`, `note`, `commentaire` | Évaluations laissées par les passagers après un trajet.      |
-
-## Relations et Cardinalités
-
-| Relation   | Description                                                 |
-|------------|-------------------------------------------------------------|
-| Conduit    | Un **conducteur** (`Utilisateurs`) peut conduire plusieurs (`Trajets`). |
-| Réserve    | Un **passager** (`Utilisateurs`) peut réserver plusieurs (`Réservations`). |
-| Évalue     | Un **passager** (`Utilisateurs`) peut évaluer plusieurs trajets (`Évaluations`). |
-
-| Cardinalité              | Description                                                                  |
-|--------------------------|------------------------------------------------------------------------------|
-| Utilisateurs à Trajets   | Un utilisateur (conducteur) peut publier plusieurs trajets. Un trajet est publié par un seul utilisateur. |
-| Utilisateurs à Réservations | Un utilisateur (passager) peut avoir plusieurs réservations. Une réservation est faite pour un seul utilisateur. |
-| Trajets à Réservations   | Un trajet peut avoir plusieurs réservations. Une réservation concerne un seul trajet. |
-| Trajets à Évaluations    | Un trajet peut avoir plusieurs évaluations. Une évaluation concerne un seul trajet. |
-| Utilisateurs à Évaluations | Un utilisateur (passager) peut laisser plusieurs évaluations. Une évaluation est laissée par un seul utilisateur. |
-
-## Relations
-- `proposer` est une relation entre `utilisateur` et `trajet`.
-- `réserver` est une relation entre `utilisateur` et `reservation`.
-- `concerne` est une relation entre `trajet` et `reservation`.
-- `commenter` est une relation entre `utilisateur` et `evaluation`.
-- `noter` est une relation entre `trajet` et `evaluation`.
-
-## Remarques
-- Les relations `commenter` et `noter` ne sont pas directement représentées en tant que tables dans le MLD, elles sont impliquées par les clés étrangères dans les tables `evaluation` et `reservation`.
-- Les types de données pour chaque attribut (VARCHAR, DATETIME, INT, DECIMAL) sont à définir selon les spécifications de votre système de gestion de base de données.
-- La table `evaluation` devrait inclure des clés étrangères pour `idUtilisateur` et `idTrajet` si l'évaluation est spécifique à un utilisateur pour un trajet donné.
-
-# Modèle Logique de Données (MLD)
-
-| Table       | Attribut          | Type            | Contraintes      | Description                                       |
-|-------------|-------------------|-----------------|------------------|---------------------------------------------------|
-| utilisateur | idUtilisateur     | Clé Primaire    | UNIQUE, NOT NULL | Identifiant unique de l'utilisateur               |
-|             | email             | VARCHAR         | NOT NULL         | Email de l'utilisateur                            |
-|             | motDePasse        | VARCHAR         | NOT NULL         | Mot de passe de l'utilisateur                    |
-|             | sel               | VARCHAR         |                  | Sel pour le hachage du mot de passe               |
-|             | nom               | VARCHAR         |                  | Nom de l'utilisateur                              |
-|             | adresse           | VARCHAR         |                  | Adresse de l'utilisateur                          |
-|             | numéroDeTéléphone | VARCHAR         |                  | Numéro de téléphone de l'utilisateur             |
-|             | photoUrl          | VARCHAR         |                  | URL de la photo de profil                         |
-|             | rôle              | VARCHAR         |                  | Rôle de l'utilisateur                             |
-|             | preferences       | VARCHAR         |                  | Préférences de l'utilisateur                      |
-|             | bio               | TEXT            |                  | Biographie de l'utilisateur                       |
-| trajet      | idTrajet          | Clé Primaire    | UNIQUE, NOT NULL | Identifiant unique du trajet                      |
-|             | départ            | VARCHAR         | NOT NULL         | Lieu de départ du trajet                          |
-|             | arrivée           | VARCHAR         | NOT NULL         | Destination du trajet                             |
-|             | dateHeure         | DATETIME        | NOT NULL         | Date et heure de départ du trajet                 |
-|             | placesDisponibles | INT             | NOT NULL         | Nombre de places disponibles                      |
-|             | prix              | DECIMAL         | NOT NULL         | Prix du trajet                                    |
-|             | dureeTrajet       | TIME            |                  | Durée prévue du trajet                            |
-|             | description       | TEXT            |                  | Description du trajet                             |
-|             | typeVehicule      | VARCHAR         |                  | Type de véhicule pour le trajet                   |
-| reservation | idReservation     | Clé Primaire    | UNIQUE, NOT NULL | Identifiant unique de la réservation              |
-|             | idUtilisateur     | Clé Étrangère   | NOT NULL         | Identifiant de l'utilisateur qui réserve          |
-|             | idTrajet          | Clé Étrangère   | NOT NULL         | Identifiant du trajet réservé                     |
-|             | status            | VARCHAR         | NOT NULL         | État de la réservation                            |
-|             | nombreDePlaces    | INT             |                  | Nombre de places réservées                        |
-|             | idUtilisateurConducteur | Clé Étrangère |               | Identifiant de l'utilisateur conducteur du trajet |
-| evaluation  | idEvaluation      | Clé Primaire    | UNIQUE, NOT NULL | Identifiant unique de l'évaluation                |
-|             | note              | INT             | NOT NULL         | Note attribuée dans l'évaluation                  |
-|             | commentaire       | TEXT            |                  | Commentaire de l'évaluation                       |
-|             | idUtilisateur     | Clé Étrangère   |                  | Identifiant de l'utilisateur qui évalue           |
-|             | idTrajet          | Clé Étrangère   |                  | Identifiant du trajet évalué                      |
-
-
 
 
 
@@ -229,7 +273,7 @@ Le backend de l'application est organisé comme suit:
 
 # 🌐 Technologies Frontend
 
-Bienvenue dans la section des technologies frontend utilisées pour le développement de l'interface utilisateur de notre site de covoiturage. Chaque technologie est sélectionnée pour optimiser le développement et offrir une expérience utilisateur fluide et réactive.
+Bienvenue dans la section des technologies frontend utilisées pour le développement de l'interface utilisateur du site de covoiturage local Lamastrois. 
 
 ## 🖥️ Technologies Utilisées
 
@@ -313,7 +357,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 - 🌐 Plateformes pour héberger des dépôts Git, faciliter la revue de code, l'intégration continue et le suivi des problèmes.
 
-## 3. **Postman ou Insomnia je sais pas encore** 📦
+## 3. **Postman** 📦
 
 - 🛠️ Outils pour tester les API, permettant de simuler des requêtes client vers le serveur sans utiliser de frontend.
 
