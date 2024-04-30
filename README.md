@@ -5,6 +5,92 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 ## 🏗 Planification et Architecture du Backend
 
 ### 🛠 Technologies Backend
+<<<<<<< HEAD
+=======
+
+| #  | Technologie        | Description                                                                                              |
+|----|--------------------|----------------------------------------------------------------------------------------------------------|
+| 1  | **Node.js**        | 🌐 Plateforme de développement côté serveur basée sur le moteur JavaScript V8 de Chrome.                 |
+| 2  | **Express.js**     | 🚀 Framework web pour Node.js qui simplifie la création de serveurs HTTP.                                |
+| 3  | **MySQL**          | 💾 Système de gestion de base de données relationnelle pour stocker et gérer les données de l'application. |
+| 4  | **Sequelize**      | 🔄 ORM pour Node.js qui prend en charge MySQL, facilitant les interactions avec la base de données.       |
+| 5  | **JWT (JSON Web Tokens)** | 🔐 Technologie pour la création de tokens de session sécurisés afin de gérer les sessions utilisateurs. |
+| 6  | **Bcrypt**         | 🔒 Bibliothèque pour hasher et sécuriser les mots de passe des utilisateurs.                              |
+| 7  | **Nodemailer**     | 📧 Module pour l'envoi d'emails, utilisé pour des fonctionnalités comme la confirmation d'inscription.    |
+| 8  | **Jest**           | 🧪 Framework de tests pour JavaScript, utilisé pour écrire des tests unitaires et d'intégration.          |
+| 9  | **Supertest**      | 🌐 Bibliothèque pour tester les API HTTP en conjonction avec Jest.
+| 10 | **mysql2**      | 🌐 Module qui sert a faire des interactions avec une base de données MySQL et améliorer les performances .                                         |
+
+## 📁 Structure du Dossier Backend avec Tests
+
+Le backend de l'application est organisé comme suit:
+
+- **`/backend`**: Dossier racine du projet.
+
+  - **`/node_modules`**: Contient les modules Node.js installés.
+  
+  - **`/src`**: Dossier principal pour le code source de l'application.
+    - **`/config`**: Contient les fichiers de configuration.
+      - **`db.config.js`**: Gère la connexion à la base de données.
+      
+    - **`/controllers`**: Gère les actions liées aux différentes entités.
+      - **`utilisateurController.js`**: Actions CRUD pour les utilisateurs.
+      - **`trajetController.js`**: Actions pour les trajets.
+      - **`reservationController.js`**: Actions pour les réservations.
+      - **`commentaireController.js`**: Actions pour les commentaires.
+      
+    - **`/models`**: Définit les structures des entités de la base de données.
+      - **`utilisateurModel.js`**: Structure de la table des utilisateurs.
+      - **`trajetModel.js`**: Structure de la table des trajets.
+      - **`reservationModel.js`**: Structure des réservations.
+      - **`commentaireModel.js`**: Structure des commentaires.
+      
+    - **`/routes`**: Définit les routes HTTP associées aux contrôleurs.
+      - **`utilisateurRoutes.js`**: Routes pour les actions sur les utilisateurs.
+      - **`trajetRoutes.js`**: Routes pour les actions sur les trajets.
+      - **`reservationRoutes.js`**: Routes pour les actions sur les réservations.
+      - **`commentaireRoutes.js`**: Routes pour les actions sur les commentaires.
+      
+    - **`/middlewares`**: Contient les middlewares pour les contrôles et validations.
+      - **`authMiddleware.js`**: Middleware pour l'authentification.
+      
+    - **`/helpers`**: Contient les fonctions utilitaires pour les tâches courantes.
+      - **`utilityHelper.js`**: Fonctions utilitaires diverses.
+      
+  - **`/tests`**: Contient les tests pour vérifier les différentes couches.
+    - **`/controllers`**: Tests pour les contrôleurs.
+      - **`utilisateurController.test.js`**: Tests pour le contrôleur des utilisateurs.
+      - **`trajetController.test.js`**: Tests pour le contrôleur des trajets.
+      - **`reservationController.test.js`**: Tests pour le contrôleur des réservations.
+      - **`commentaireController.test.js`**: Tests pour le contrôleur des commentaires.
+    - **`/models`**: Tests pour les modèles.
+      - **`utilisateurModel.test.js`**: Tests pour le modèle des utilisateurs.
+      - **`trajetModel.test.js`**: Tests pour le modèle des trajets.
+      - **`reservationModel.test.js`**: Tests pour le modèle des réservations.
+      - **`commentaireModel.test.js`**: Tests pour le modèle des commentaires.
+    - **`/routes`**: Tests pour les routes.
+      - **`utilisateurRoutes.test.js`**: Tests pour les routes des utilisateurs.
+      - **`trajetRoutes.test.js`**: Tests pour les routes des trajets.
+      - **`reservationRoutes.test.js`**: Tests pour les routes des réservations.
+      - **`commentaireRoutes.test.js`**: Tests pour les routes des commentaires.
+
+  - **`/public`**: Contient les fichiers statiques.
+    - **`404.html`**: Page d'erreur 404.
+    - **`500.html`**: Page d'erreur 500.
+    - **`/images`**: Contient les images associées.
+      - **`404.png`**: Image pour la page d'erreur 404.
+      - **`500.png`**: Image pour la page d'erreur 500.
+
+  - **`server.js`**: Démarre le serveur et appelle `app.js`.
+  
+  - **`app.js`**: Configure les routes, middlewares, et autres aspects de l'application.
+
+  - **`package.json`**: Gère les dépendances du projet.
+
+  - **`.env`**: Stocke les variables d'environnement.
+
+  - **`.gitignore`**: Fichier pour ignorer certains fichiers ou dossiers dans Git.
+>>>>>>> main
 
 | #   | Technologie               | Description                                                                                               |
 | --- | ------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -19,6 +105,7 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | 9   | **Supertest**             | 🌐 Bibliothèque pour tester les API HTTP en conjonction avec Jest.                                         |
 | 10  | **mysql2**                | 🌐 Module qui sert a faire des interactions avec une base de données MySQL et améliorer les performances . |
 
+<<<<<<< HEAD
 ### 📁 Structure du Dossier Backend avec Tests
 
 - `/backend`
@@ -76,6 +163,26 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | Passager                | passager                | réserver une place dans un trajet                        | et recevoir une confirmation de ma réservation                       |
 | Utilisateur Authentifié | utilisateur authentifié | laisser une évaluation et un commentaire après un trajet | partager mon expérience avec la communauté                           |
 | Administrateur          | administrateur          | voir tous les utilisateurs, trajets et réservations      | gérer le système de covoiturage efficacement                         |
+=======
+##
+
+# User Stories
+
+| Rôle | En tant que... | Je veux pouvoir... | Afin de... |
+|------|----------------|--------------------|------------|
+| Utilisateur | passager ou conducteur | m'inscrire avec mon email et un mot de passe | créer mon compte personnel |
+| Utilisateur | passager ou conducteur | me connecter à mon compte | accéder aux fonctionnalités personnalisées |
+| Utilisateur | passager ou conducteur | mettre à jour mon profil | modifier mes informations personnelles comme mon contact et ma photo |
+| Conducteur | conducteur | publier des trajets avec tous les détails nécessaires | que les passagers puissent les réserver |
+| Conducteur | conducteur | gérer mes trajets publiés | les modifier ou les supprimer si nécessaire |
+| Passager | passager | rechercher des trajets disponibles | trouver un trajet qui convient à mes préférences |
+| Passager | passager | réserver une place dans un trajet | et recevoir une confirmation de ma réservation |
+| Utilisateur Authentifié | utilisateur authentifié | laisser une évaluation et un commentaire après un trajet | partager mon expérience avec la communauté |
+| Administrateur | administrateur | voir tous les utilisateurs, trajets et réservations | gérer le système de covoiturage efficacement |
+
+##
+# Modèle Conceptuel de Données (MCD)
+>>>>>>> main
 
 ##
 
@@ -83,6 +190,19 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 
 ![Description alternative](./MCD.svg "MCD du site de coivoituge local")
 
+<<<<<<< HEAD
+=======
+- **commenter** (<ins>_#idUtilisateur_</ins>, <ins>_#idEvaluation_</ins>)
+- **concerner** (<ins>_#idTrajet_</ins>, <ins>_#idReservation_</ins>)
+- **evaluation** (<ins>idEvaluation</ins>, note, commentaire)
+- **noter** (<ins>_#idTrajet_</ins>, <ins>_#idEvaluation_</ins>)
+- **proposer** (<ins>_#idUtilisateur_</ins>, <ins>_#idTrajet_</ins>)
+- **reservation** (<ins>idReservation</ins>, status)
+- **réserver** (<ins>_#idUtilisateur_</ins>, <ins>_#idReservation_</ins>)
+- **trajet** (<ins>idTrajet</ins>, départ, arrivée, dateHeure, placesDisponibles, prix)
+- **utilisateur** (<ins>idUtilisateur</ins>, email, motDePasse, nom, adresse, numéroDeTéléphone, photoUrl, rôle)
+
+>>>>>>> main
 ## Entités
 
 | Entité       | Attributs                                                                              | Description                                                         |
@@ -92,6 +212,7 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | Réservations | `id`, `trajet_id`, `passager_id`, `status`                                             | Réservations effectuées par les passagers pour des trajets.         |
 | Évaluations  | `id`, `trajet_id`, `passager_id`, `note`, `commentaire`                                | Évaluations laissées par les passagers après un trajet.             |
 
+<<<<<<< HEAD
 ## Relations et Cardinalités
 
 | Relation | Description                                                                      |
@@ -135,9 +256,18 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 |                  | `passager_id`        | INT                                        | FOREIGN KEY REFERENCES Utilisateurs(id), NOT NULL |
 |                  | `note`               | INT                                        | NOT NULL                                          |
 |                  | `commentaire`        | TEXT                                       |                                                   |
+=======
+| **Entité**     | **Attributs**                                        | **Description**                                                              |
+|---------------|-------------------------------------------------------|-------------------------------------------------------------------------------|
+| **Utilisateur** | `idUtilisateur`, `email`, `motDePasse`, `nom`, `adresse`, `numéroDeTéléphone`, `photoUrl`, `rôle` | Détails sur les utilisateurs, y compris les conducteurs et les passagers.   |
+| **Trajet**      | `idTrajet`, `départ`, `arrivée`, `dateHeure`, `placesDisponibles`, `prix` | Informations sur les trajets offerts par les conducteurs, incluant la destination, la date, et les détails du trajet. |
+| **Réservation** | `idReservation`, `status`                            | Réservations effectuées par les passagers pour les trajets.                 |
+| **Évaluation**  | `idEvaluation`, `note`, `commentaire`                | Évaluations laissées par les passagers après un trajet, y compris la note et le commentaire. |
+>>>>>>> main
 
 # API Endpoints
 
+<<<<<<< HEAD
 | Catégorie                    | Méthode HTTP | Endpoint              | Description                                  |
 | ---------------------------- | ------------ | --------------------- | -------------------------------------------- |
 | **Authentification**         | POST         | `/auth/register`      | Inscription d'un nouvel utilisateur.         |
@@ -178,6 +308,163 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 | 8   | **Testing Library** | 🧪 Ensemble d'outils de test pour aider à écrire des tests robustes pour les composants React, garantissant la fiabilité des composants.                  |
 | 9   | **Jest**            | 📊 Framework de tests JavaScript populaire pour les tests unitaires, assurant que le code respecte les fonctionnalités attendues.                         |
 | 10  | **JSX**             | ⚛️ Syntaxe qui étend JavaScript permettant d'écrire des éléments HTML dans les scripts React, facilitant la création d'interfaces utilisateur dynamiques. |
+=======
+
+### Associations
+
+- Utilisateur - Réserve - Trajet (1:N)
+- Utilisateur - Réserve - Réservation (1:N)
+- Utilisateur - Évalue - Trajet (1:N)
+- Utilisateur - Évalue - Évaluation (1:N)
+
+
+### Relations entre les Entités
+
+- **Utilisateur et Trajet:** Un utilisateur peut proposer plusieurs trajets, chaque trajet étant relié à un conducteur.
+- **Trajet et Réservation:** Un trajet peut être réservé par plusieurs utilisateurs, les réservations étant associées aux trajets spécifiques.
+- **Trajet et Évaluation:** Un trajet peut être évalué par les passagers, permettant de recueillir des notes et des commentaires.
+- **Réservation et Évaluation:** Une évaluation peut être associée à une réservation, permettant aux passagers d'évaluer leurs trajets.
+
+### Notes Supplémentaires
+
+- **Détails Précis:** Chaque entité contient des informations spécifiques pour refléter son rôle dans l'application.
+- **Interactions:** Les entités interagissent entre elles de manière cohérente, facilitant la gestion des fonctionnalités principales de l'application de covoiturage.
+
+
+
+## Modèle Logique de Données (MLD)
+
+| Table         | Attribut           | Type                  | Contraintes                          |
+|---------------|--------------------|-----------------------|--------------------------------------|
+| **Utilisateurs** | `idUtilisateur`     | INT                   | PRIMARY KEY                          |
+|               | `Email`            | VARCHAR(100)          | NOT NULL                             |
+|               | `MotDePasse`       | VARCHAR(255)          | NOT NULL                             |
+|               | `Nom`              | VARCHAR(100)          | NOT NULL                             |
+|               | `Adresse`          | VARCHAR(255)          |                                      |
+|               | `NuméroDeTéléphone`| VARCHAR(20)           |                                      |
+|               | `PhotoUrl`         | VARCHAR(255)          |                                      |
+|               | `Rôle`             | VARCHAR(50)           |                                      |
+| **Trajets**   | `idTrajet`         | INT                   | PRIMARY KEY                          |
+|               | `Départ`           | VARCHAR(100)          | NOT NULL                             |
+|               | `Arrivée`          | VARCHAR(100)          | NOT NULL                             |
+|               | `DateHeure`        | DATETIME              | NOT NULL                             |
+|               | `PlacesDisponibles`| INT                   | NOT NULL                             |
+|               | `Prix`             | FLOAT                 | NOT NULL                             |
+| **Réservations** | `idReservation` | INT                   | PRIMARY KEY                          |
+|               | `Status`           | VARCHAR(50)           | NOT NULL                             |
+|               | `idUtilisateur`    | INT                   | FOREIGN KEY REFERENCES Utilisateurs(idUtilisateur) |
+|               | `idTrajet`         | INT                   | FOREIGN KEY REFERENCES Trajets(idTrajet) |
+| **Évaluations** | `idEvaluation`   | INT                   | PRIMARY KEY                          |
+|               | `Note`             | FLOAT                 | NOT NULL                             |
+|               | `Commentaire`      | TEXT                  |                                      |
+|               | `idUtilisateur`    | INT                   | FOREIGN KEY REFERENCES Utilisateurs(idUtilisateur) |
+|               | `idTrajet`         | INT                   | FOREIGN KEY REFERENCES Trajets(idTrajet) |
+
+
+## Modèle Physique de Données (MPD)
+
+### Utilisateurs
+
+| Champ             | Type            | Description                          |
+|-------------------|-----------------|--------------------------------------|
+| idUtilisateur     | INT             | ID unique de l'utilisateur           |
+| Email             | VARCHAR(100)    | Adresse email de l'utilisateur      |
+| MotDePasse        | VARCHAR(255)    | Mot de passe de l'utilisateur       |
+| Nom               | VARCHAR(100)    | Nom complet de l'utilisateur         |
+| Adresse           | VARCHAR(255)    | Adresse postale de l'utilisateur    |
+| NuméroDeTéléphone| VARCHAR(20)     | Numéro de téléphone de l'utilisateur|
+| PhotoUrl          | VARCHAR(255)    | URL de la photo de l'utilisateur    |
+| Rôle              | VARCHAR(50)     | Rôle de l'utilisateur                |
+
+### Trajets
+
+| Champ             | Type            | Description                          |
+|-------------------|-----------------|--------------------------------------|
+| idTrajet          | INT             | ID unique du trajet                  |
+| Départ            | VARCHAR(100)    | Point de départ du trajet            |
+| Arrivée           | VARCHAR(100)    | Point d'arrivée du trajet           |
+| DateHeure         | DATETIME        | Date et heure du trajet              |
+| PlacesDisponibles | INT             | Nombre de places disponibles         |
+| Prix              | FLOAT           | Prix du trajet                       |
+
+### Réservations
+
+| Champ             | Type            | Description                          |
+|-------------------|-----------------|--------------------------------------|
+| idReservation     | INT             | ID unique de la réservation          |
+| Status            | VARCHAR(50)     | Statut de la réservation             |
+| idUtilisateur     | INT             | ID de l'utilisateur qui réserve      |
+| idTrajet          | INT             | ID du trajet réservé                 |
+
+### Évaluations
+
+| Champ             | Type            | Description                          |
+|-------------------|-----------------|--------------------------------------|
+| idEvaluation      | INT             | ID unique de l'évaluation            |
+| Note              | FLOAT           | Note attribuée                       |
+| Commentaire       | TEXT            | Commentaire de l'utilisateur         |
+| idUtilisateur     | INT             | ID de l'utilisateur qui évalue       |
+| idTrajet          | INT             | ID du trajet évalué                  |
+
+
+
+
+# Dictionnaire de Données
+
+
+| Entité       | Attributs                                                                                                                                      |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| Évaluation    | - **idEvaluation**: Identifiant unique pour l'évaluation.<br> - **Note**: La note attribuée.<br> - **Commentaire**: Un commentaire associé à l'évaluation. |
+| Utilisateur  | - **idUtilisateur**: Identifiant unique pour l'utilisateur.<br> - **Email**: Adresse email de l'utilisateur.<br> - **MotDePasse**: Mot de passe de l'utilisateur.<br> - **Nom**: Nom de l'utilisateur.<br> - **Adresse**: Adresse de l'utilisateur.<br> - **NuméroDeTéléphone**: Numéro de téléphone de l'utilisateur.<br> - **PhotoUrl**: URL de la photo de profil de l'utilisateur.<br> - **Rôle**: Le rôle de l'utilisateur (par exemple, admin ou utilisateur standard). |
+| Trajet       | - **idTrajet**: Identifiant unique pour le trajet.<br> - **Départ**: Lieu de départ.<br> - **Arrivée**: Lieu d'arrivée.<br> - **DateHeure**: Date et heure du trajet.<br> - **PlacesDisponibles**: Nombre de places disponibles.<br> - **Prix**: Le prix du trajet. |
+| Réservation  | - **idReservation**: Identifiant unique pour la réservation.<br> - **Status**: Statut de la réservation (confirmée, annulée, etc.).            |
+| Entités Additionnelles | - **Commenter**, **Noter**, **Proposer**, **Réserver**, **Concerner**: Ces entités sont identifiées dans le modèle mais n'ont pas encore d'attributs associés. |
+
+
+
+# API Endpoints
+
+| Catégorie              | Méthode HTTP | Endpoint                 | Description                                         |
+|------------------------|--------------|--------------------------|-----------------------------------------------------|
+| **Authentification**   | POST         | `/auth/register`         | Inscription d'un nouvel utilisateur.                |
+|                        | POST         | `/auth/login`            | Connexion de l'utilisateur.                         |
+| **Profil Utilisateur** | GET          | `/users/profile`         | Obtenir le profil de l'utilisateur connecté.        |
+|                        | PUT          | `/users/profile`         | Mettre à jour le profil.                            |
+| **Gestion des Trajets**| POST         | `/trajets`               | Publier un nouveau trajet.                          |
+|                        | GET          | `/trajets`               | Lister les trajets disponibles.                      |
+|                        | GET          | `/trajets/:id`           | Détails d'un trajet.                                |
+|                        | PUT          | `/trajets/:id`           | Mettre à jour un trajet.                            |
+|                        | DELETE       | `/trajets/:id`           | Supprimer un trajet.                                |
+| **Recherche et Réservation** | GET    | `/trajets/search`        | Rechercher des trajets selon des critères.          |
+|                        | POST         | `/reservations`          | Créer une nouvelle réservation.                     |
+|                        | PUT          | `/reservations/:id`      | Mettre à jour le statut de la réservation.          |
+| **Évaluations**        | POST         | `/evaluations`           | Ajouter une évaluation pour un trajet.              |
+|                        | GET          | `/evaluations`           | Lister les évaluations.                             |
+| **Administration**     | GET          | `/admin/users`           | Lister tous les utilisateurs.                       |
+|                        | GET          | `/admin/trajets`         | Lister tous les trajets.                            |
+|                        | GET          | `/admin/reservations`    | Lister toutes les réservations.                     |
+
+##
+
+# 🌐 Technologies Frontend
+
+Bienvenue dans la section des technologies frontend utilisées pour le développement de l'interface utilisateur du site de covoiturage local Lamastrois. 
+
+## 🖥️ Technologies Utilisées
+
+| #  | Technologie         | Description                                                                                              |
+|----|---------------------|----------------------------------------------------------------------------------------------------------|
+| 1  | **React**           | 🏗️ Bibliothèque JavaScript pour la construction d'interfaces utilisateur, utilisée pour créer des vues dynamiques dans le navigateur. |
+| 2  | **Vite.js**         | ⚡ Outil de build moderne qui offre un démarrage rapide et des rechargements à chaud pour les projets utilisant des modules ES.        |
+| 3  | **React Router**    | 🚦 Bibliothèque pour gérer le routage dans les applications React, essentielle pour une navigation fluide et conditionnelle.          |
+| 4  | **Axios**           | 🌍 Client HTTP basé sur les promesses pour le navigateur et Node.js, utilisé pour faire des requêtes HTTP efficaces.                  |
+| 5  | **Formik**          | 📝 Bibliothèque pour la gestion des formulaires en React, facilitant la validation et le suivi des états des champs.                    |
+| 6  | **Yup**             | 🔍 Constructeur de schéma pour la validation côté client, souvent utilisé avec Formik pour assurer l'intégrité des données saisies.   |
+| 7 | **SCSS** | 🎨 Préprocesseur CSS qui permet une écriture de styles plus dynamique . |
+| 8  | **Testing Library** | 🧪 Ensemble d'outils de test pour aider à écrire des tests robustes pour les composants React, garantissant la fiabilité des composants. |
+| 9  | **Jest**            | 📊 Framework de tests JavaScript populaire pour les tests unitaires, assurant que le code respecte les fonctionnalités attendues.       |
+| 10 | **JSX** | ⚛️ Syntaxe qui étend JavaScript permettant d'écrire des éléments HTML dans les scripts React, facilitant la création d'interfaces utilisateur dynamiques. |
+>>>>>>> main
 
 ## 📂 Structure du Dossier Frontend
 
@@ -246,7 +533,11 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 - 🌐 Plateformes pour héberger des dépôts Git, faciliter la revue de code, l'intégration continue et le suivi des problèmes.
 
+<<<<<<< HEAD
 ## 3. **Insomnia** 📦
+=======
+## 3. **Postman** 📦
+>>>>>>> main
 
 - 🛠️ Outils pour tester les API, permettant de simuler des requêtes client vers le serveur sans utiliser de frontend.
 
@@ -281,7 +572,11 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 ### 🌞 Weekend #Repos
 
+<<<<<<< HEAD
 - [ ] 😌 Prendre du repos et se préparer pour le développement
+=======
+- [x] 😌 Prendre du repos et se préparer pour le développement
+>>>>>>> main
 
 ## Semaine 2 (30 Avril - 5 Mai)
 
@@ -289,7 +584,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 - [x] 🛠 Développer Sprint 1 (Mise en place de l'environnement de base, Définition de l'architecture initiale)
 - [ ] 🗝 Développement des fonctionnalités d'authentification et de profil utilisateur
-- [ ] 🗃 Conception de la base de données
+- [x] 🗃 Conception de la base de données
 
 ## Semaine 3 (6 - 12 Mai)
 
@@ -359,7 +654,11 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 ### 🔧 Sprint 1 #Sprint1
 
+<<<<<<< HEAD
 - [ ] 🧑‍💻 Implémenter les modèles de données utilisateur
+=======
+- [x] 🧑‍💻 Implémenter les modèles de données utilisateur
+>>>>>>> main
 - [ ] 🔗 Créer les endpoints d'authentification
 - [ ] 🔐 Installer le système d'authentification sur le frontend
 
@@ -389,3 +688,8 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 
 - [ ] 🎬 Marquer le lancement du projet
 - [ ] 📝 Effectuer la première revue du code
+
+
+
+
+
