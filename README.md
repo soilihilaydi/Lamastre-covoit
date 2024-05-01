@@ -398,7 +398,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ### 👨‍💻 Lundi à Vendredi #Développement
 
 - [x] 🛠 Développer Sprint 1 (Mise en place de l'environnement de base, Définition de l'architecture initiale)
-- [ ] 🗝 Développement des fonctionnalités d'authentification et de profil utilisateur
+- [x] 🗝 Développement des fonctionnalités d'authentification et de profil utilisateur
 - [x] 🗃 Conception de la base de données
 
 ## Semaine 3 (6 - 12 Mai)
@@ -470,7 +470,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ### 🔧 Sprint 1 #Sprint1
 
 - [x] 🧑‍💻 Implémenter les modèles de données utilisateur
-- [ ] 🔗 Créer les endpoints d'authentification
+- [x] 🔗 Créer les endpoints d'authentification
 - [ ] 🔐 Installer le système d'authentification sur le frontend
 
 ### 🔧 Sprint 2 #Sprint2
