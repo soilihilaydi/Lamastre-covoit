@@ -1,14 +1,10 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
+import express from "express";
 
 const app = express();
 
-// Middlewares
-app.use(cors());
+// Middleware pour parser le corps des requêtes en JSON
 app.use(express.json());
 
 // Routes
-// TODO: Ajouter les routes ici
 
-module.exports = app;
+export default app;
