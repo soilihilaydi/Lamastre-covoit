@@ -16,8 +16,7 @@ Bienvenue dans la documentation du projet de covoiturage local Lamastrois. Cette
 | 6  | **Bcrypt**         | 🔒 Bibliothèque pour hasher et sécuriser les mots de passe des utilisateurs.                              |
 | 7  | **Nodemailer**     | 📧 Module pour l'envoi d'emails, utilisé pour des fonctionnalités comme la confirmation d'inscription.    |
 | 8  | **Jest**           | 🧪 Framework de tests pour JavaScript, utilisé pour écrire des tests unitaires et d'intégration.          |
-| 9  | **Supertest**      | 🌐 Bibliothèque pour tester les API HTTP en conjonction avec Jest.
-| 10 | **mysql2**      | 🌐 Module qui sert a faire des interactions avec une base de données MySQL et améliorer les performances .                                         |
+| 9  | **Supertest**      | 🌐 Bibliothèque pour tester les API HTTP en conjonction avec Jest.                                      |
 
 ## 📁 Structure du Dossier Backend avec Tests
 
@@ -399,7 +398,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ### 👨‍💻 Lundi à Vendredi #Développement
 
 - [x] 🛠 Développer Sprint 1 (Mise en place de l'environnement de base, Définition de l'architecture initiale)
-- [ ] 🗝 Développement des fonctionnalités d'authentification et de profil utilisateur
+- [x] 🗝 Développement des fonctionnalités d'authentification et de profil utilisateur
 - [x] 🗃 Conception de la base de données
 
 ## Semaine 3 (6 - 12 Mai)
@@ -471,7 +470,7 @@ Bienvenue dans la section des technologies frontend utilisées pour le développ
 ### 🔧 Sprint 1 #Sprint1
 
 - [x] 🧑‍💻 Implémenter les modèles de données utilisateur
-- [ ] 🔗 Créer les endpoints d'authentification
+- [x] 🔗 Créer les endpoints d'authentification
 - [ ] 🔐 Installer le système d'authentification sur le frontend
 
 ### 🔧 Sprint 2 #Sprint2
