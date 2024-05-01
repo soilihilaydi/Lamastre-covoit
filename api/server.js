@@ -1,6 +1,13 @@
-const app = require("./app");
+import app from "./app.js";
+import dotenv from "dotenv";
 
-const PORT = process.env.PORT || 3000;
+// Charger les variables d'environnement
+dotenv.config();
+
+const PORT = process.env.PORT;
+
 app.listen(PORT, () => {
-  console.log(`Serveur en écoute sur le port ${PORT}`);
+  console.log(
+    `hey man ca roule pour toi pour moi ca tourne le serveur et pret  ${PORT}`,
+  );
 });
